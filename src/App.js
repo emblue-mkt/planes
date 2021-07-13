@@ -6,7 +6,7 @@ import {
   RadioGroup,
   FormControlLabel,
   FormControl,
-  withStyles
+  withStyles,
 } from "@material-ui/core";
 import StyledRadio from "./components/StyledRadio";
 import CustomSlider from "./components/CustomSlider";
@@ -77,7 +77,7 @@ const PriceText = styled.span`
 `;
 const StyledButton = styled.button`
   border: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   letter-spacing: 0.01em;
   color: #ffffff;
@@ -87,21 +87,45 @@ const StyledButton = styled.button`
   align-self: flex-end;
 `;
 const StyledFormControl = withStyles({
-  root:{
+  root: {
     width: "100%",
     borderTop: "2px solid #999999",
-    borderBottom: "2px solid #999999"
-  }
+    borderBottom: "2px solid #999999",
+  },
 })(FormControl);
 function App() {
   var currencySelector = document.getElementById("currencySelector");
+  var anualPayment = document.getElementById("anualPayment");
+  var monthlyPayment = document.getElementById("monthlyPayment");
+
   const [quantity, setQuantity] = useState(10);
   const [price, setPrice] = useState(0);
   const [plan, setPlan] = useState(planData.free);
   const [currency, setCurrency] = useState(currencySelector.value);
+  const [isAnual, setIsAnual] = useState(true);
+  const [displayPrice, _setDisplayPrice] = "$0";
+
+  var basePrice = isAnual ? plan.anualPrice : plan.monthlyPrice;
+  /*   var displayPrice =
+    quantity > plan.included
+      ? basePrice + (plan.extraCpm * (quantity - plan.included)) / 1000
+      : basePrice; */
+
   currencySelector.addEventListener("change", (e) =>
     setCurrency(e.target.value)
   );
+  anualPayment.addEventListener("change", (e) => {
+    handlePaymentChange(e);
+  });
+  monthlyPayment.addEventListener("change", (e) => {
+    handlePaymentChange(e);
+  });
+
+  const handlePaymentChange = (e) => {
+    var value = e.target.value === "anual" ? true : false;
+    setIsAnual(value);
+    setPrice(displayPrice);
+  };
   const handlePlanChange = (e) => {
     var opt = e.target.value;
     var newPlan =
@@ -115,17 +139,14 @@ function App() {
         ? planData.enterprise
         : planData.free;
     setPlan(newPlan);
-    setPrice(newPlan.basePrice);
+    setPrice(isAnual ? newPlan.anualPrice : newPlan.monthlyPrice);
     setQuantity(newPlan.included);
   };
   const handleSliderChange = (e, val) => {
     setQuantity(val);
-    setPrice(
-      val > plan.included
-        ? plan.basePrice + (plan.extraCpm * (val - plan.included)) / 1000
-        : plan.basePrice
-    );
+    setPrice(displayPrice);
   };
+
   return (
     <Container>
       <Heading>Definamos cual es tu plan ideal</Heading>
@@ -183,11 +204,12 @@ function App() {
         </FormWrapper>
       </StyledFormControl>
       <PriceWrapper>
-        <div style={{flexGrow: 1}}>
+        <div style={{ flexGrow: 1 }}>
           <BlueHeading>Plan {plan.title}:</BlueHeading>
           <PriceText>
-            Desde <Price>{getPrice(currency, price)}</Price> por mes en un (1)
-            pago anual <span style={{ color: "#FD5739" }}>(*)</span>
+            Desde <Price>{getPrice(currency, price)}</Price> por mes{" "}
+            {isAnual ? `en un (1) pago anual` : `en 12 pagos`}{" "}
+            <span style={{ color: "#FD5739" }}>(*)</span>
           </PriceText>
         </div>
         <StyledButton>Contacta a un representante</StyledButton>
