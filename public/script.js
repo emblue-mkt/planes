@@ -217,3 +217,12 @@ function getCpm(country) {
 function handleSMSChange() {
   smsValue.innerHTML = `USD ${getCpm(smsCountry.value) * smsQuantity.value}`;
 }
+
+
+const toggleElement = (el) => {
+  if(!el.style.height || el.style.height === "0px") {
+    el.style.height = el.scrollHeight + "px"
+  }else{
+    el.style.height = '0px'
+  }
+}
