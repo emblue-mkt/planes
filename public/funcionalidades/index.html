@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionalidades</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="planSection">
+        <h1> Compara según funcionalidades</h1>
+        <p class="introP"> Todos nuestros planes <strong>se facturan como decidas</strong>, de forma anual o mensual.
+            <strong>Siempre en tu moneda local</strong> y de acuerdo al valor del dólar que marque el banco central de
+            tu país. <span>¡Ahorra un 20% con tu pago anual!</span>
+        </p>
+        <ul id="payment">
+            <li> <label for="anual" class="container"> Anual <input type="radio" id="anualPayment" name="paymentOption"
+                        value="anual" checked> <span class="checkmark"></span> </label></li>
+            <li> <label for="monthly" class="container"> Mensual <input type="radio" id="monthlyPayment"
+                        name="paymentOption" value="monthly"> <span class="checkmark"></span> </label></li>
+            <li class="customSelect"> <select name="currency" id="currencySelector">
+                    <option value="PY"> Guaraní</option>
+                    <option value="PE"> Sol Peruano</option>
+                    <option value="BR"> Real Brasilero</option>
+                    <option value="UY"> Peso Uruguayo</option>
+                    <option value="MX"> Peso Mexicano</option>
+                    <option value="CO"> Peso Colombiano</option>
+                    <option value="CL"> Peso Chileno</option>
+                    <option value="BO"> Peso Boliviano</option>
+                    <option value="AR"> Peso Argentino</option>
+                    <option value="US" selected> $ USD</option>
+                </select> <span class="customArrow"></span></li>
+            <li class="customSelect selectorWrapper"> <select name="plan" id="planSelector">
+                    <option value="ent" selected> Enterprise</option>
+                    <option value="pro"> Professional</option>
+                    <option value="stan"> Standard</option>
+                    <option value="free"> Free</option>
+                </select> <span class="customArrow"></span></li>
+        </ul>
+        <div class="mainTableWrapper">
+            <table id="priceTable">
+                <tr>
+                    <td> Elige cuándo y cómo te acompañamos</td>
+                    <td>
+                        <h3> Enterprise</h3>
+                    </td>
+                    <td>
+                        <h3> Professional</h3>
+                    </td>
+                    <td>
+                        <h3> Standard</h3>
+                    </td>
+                    <td>
+                        <h3> Free</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td> Precios</td>
+                    <td>
+                        <div class="priceCopy"> <span class="planPrice" id="entPrice"> $1.440 </span>
+                            <p id="entCopy"><strong>Por mes en un 1 pago anual,</strong> o desde $1.800 por mes en 12
+                                pagos.</p>
+                        </div><button> Contacta un representante </button>
+                        <a href="#root" class="calcCta">Calcula el costo de tus envios</a>
+                    </td>
+                    <td>
+                        <div class="priceCopy"> <span class="planPrice" id="proPrice"> $720 </span>
+                            <p id="proCopy"><strong>Por mes en un 1 pago anual,</strong> o desde $900 por mes en 12
+                                pagos.</p>
+                        </div><button> Contacta un representante </button>
+                        <a href="#root" class="calcCta">Calcula el costo de tus envios</a>
+                    </td>
+                    <td>
+                        <div class="priceCopy"> <span class="planPrice" id="stanPrice"> $144 </span>
+                            <p id="stanCopy"><strong>Por mes en un 1 pago anual,</strong> o desde $180 por mes en 12
+                                pagos.</p>
+                        </div><button> Contacta un representante </button>
+                        <a href="#root" class="calcCta">Calcula el costo de tus envios</a>
+                    </td>
+                    <td>
+                        <div class="priceCopy"> <span class="planPrice" id="freePrice"> $0 </span>
+                            <p><strong>Tu primer paso</strong> hacia la omnicanalidad simple.</p>
+                        </div><button> ¡Activar mi plan! </button>
+                        <a href="#root" class="calcCta">Calcula el costo de tus envios</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="tableWrapper">
+            <table id="planSpecs">
+                <tr>
+                    <td> Conversaciones incluidas:</td>
+                    <td> <span class="planQ">2.500.000</span> <span class="qTitle"> Emails - Push Notifications Webhooks
+                        </span></td>
+                    <td> <span class="planQ">500.000</span> <span class="qTitle"> Emails - Push Notifications Webhooks
+                        </span></td>
+                    <td> <span class="planQ">50.000 </span> <span class="qTitle"> Emails - Push Notifications Webhooks
+                        </span></td>
+                    <td> <span class="planQ">10.000 </span> <span class="qTitle">Emails</span></td>
+                </tr>
+                <tr>
+                    <td> Costo/envíos adicionales:</td>
+                    <td> <span class="planP"> U$D 0,72 CPM </span> <span class="qTitle"> Emails - Push Notifications
+                            Webhooks </span></td>
+                    <td> <span class="planP">U$D 1,80 CPM</span> <span class="qTitle"> Emails - Push Notifications
+                            Webhooks </span></td>
+                    <td> <span class="planP">U$D 3,60 CPM </span> <span class="qTitle"> Emails - Push Notifications
+                            Webhooks </span></td>
+                    <td> <span class="planP">U$D 3,60 CPM </span> <span class="qTitle">Emails</span></td>
+                </tr>
+                <tr>
+                    <td> Costo/adjunto en los emails.</td>
+                    <td> <span class="planP"> U$D 5 CPM </span></td>
+                    <td> <span class="planP">U$D 5 CPM</span></td>
+                    <td> <span class="planP">U$D 3,60 CPM</span></td>
+                    <td> <span class="planP">U$D 3,60 CPM </span></td>
+                </tr>
+                <tr>
+                    <td> Impresiones: <span class="aboutSpec"> para tus Banners Pop Ups <br> con OnSite </span></td>
+                    <td> <span class="planT"> 10.000 </span></td>
+                    <td> <span class="planT"> 10.000 </span></td>
+                    <td> <span class="planT"> 10.000 </span></td>
+                    <td> <span class="planT"> 10.000 </span></td>
+                </tr>
+                <tr>
+                    <td> Costo impresiones adicionales: <span class="aboutSpec"> Banners Pop Ups con OnSite </span></td>
+                    <td> <span class="planP">U$D 0,3 CPM </span></td>
+                    <td> <span class="planP">U$D 0,3 CPM </span></td>
+                    <td> <span class="planP">U$D 0,3 CPM </span></td>
+                    <td> <span class="planP">U$D 0,3 CPM </span></td>
+                </tr>
+                <tr>
+                    <td> Audiencias: <span class="aboutSpec"> Cantidad de contactos inlcuidos </span></td>
+                    <td> <span class="planT"> ilimitados </span></td>
+                    <td> <span class="planT"> ilimitados </span></td>
+                    <td> <span class="planT"> ilimitados </span></td>
+                    <td> <span class="planT"> ilimitados </span></td>
+                </tr>
+            </table>
+        </div>
+        <div class="breakdownWrapper">
+            <h2> Todo lo que incluye tu plan: <strong>Equipos</strong></h2>
+            <h3> Implementaciones</h3>
+            <table class="breakdown">
+                <tr>
+                    <td> - Diseño de templates</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Maquetado de piezas</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Diseño de landing pages</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Adaptación de piezas a buenas prácticas</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Ejecución de campañas</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+            </table>
+            <h3> Soporte y capacitaciones</h3>
+            <table class="breakdown">
+                <tr>
+                    <td> - Atención via email, chat y teléfono</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Capacitaciones online y gratuitas</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Agente de Customer Success</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Ejecutivo de cuentas asginado</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Prioridad de atención</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Capacitaciones in house</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Workshops exclusivos a medida</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+            </table>
+            <h3> Asesoramiento omnicanal</h3>
+            <table class="breakdown">
+                <tr>
+                    <td> - Reportes personalizados</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Onboarding y asesoramiento inicial</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Gantt de trabajo</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Automatización de Customer Journeys</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Desarrollo de iniciativas omnicanales</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Equipo de innovación dedicado</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Migración a canales digitales</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+            </table>
+            <h3> Reportes y optimización de campañas</h3>
+            <table class="breakdown">
+                <tr>
+                    <td> - Asesoría en Deliverability</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Auditoria en Sender Scoring</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Análisis y reporte del estado y limpieza de tu base de contactos</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Envíos auditados por Validity</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+            </table>
+            <h2> Todo lo que incluye tu plan: <strong>Herramientas</strong></h2>
+            <h3> Automatizaciones e integraciones</h3>
+            <table class="breakdown">
+                <tr>
+                    <td> - Triggers por comportamiento de los usuarios</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Carrito abandonado</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Asesoramiento en automatizaciones</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - VTEX - Facebook - Tokko - Shopify - Magento - Prestashop - Fenicio - Woocommerce - Qualtrics
+                    </td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Realizadas por nuestro Equipo de Implementaciones</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Quick Campaigner</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Procesos de sincronización de datos</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+            </table>
+            <h3> Canales y conversaciones</h3>
+            <table class="breakdown">
+                <tr>
+                    <td> - Email</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - WhatsApp Pop Ups</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Onsite Banner Pop Ups</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Net Promotore Score (NPS)</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - SMS</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Push Notifications</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Emails con adjuntos</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+            </table>
+            <h3> Diseño y posicionamiento de marca</h3>
+            <table class="breakdown">
+                <tr>
+                    <td> - Editor de plantillas Drag&Drop</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Email Templates</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Remover footer emBlue</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Integración con tu catálogo de productos</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+            </table>
+            <h3> Soluciones</h3>
+            <table class="breakdown">
+                <tr>
+                    <td> - Marketing Automation</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Personalización de contenidos en tiempo real</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Campos personalizados</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Split test</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Generación de leads via Banners Pop ups</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Webconnect</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Remarketing</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+            </table>
+            <h3> Segmentación</h3>
+            <table class="breakdown">
+                <tr>
+                    <td> - Creacion de grupos</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Creación de segmentos dinámicos</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Lead Nurturing y valoración de contactos</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Uso de Tags para etiquetar contactos</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+            </table>
+            <h3> Reportes y optimización de resultados</h3>
+            <table class="breakdown">
+                <tr>
+                    <td> - Reportes de sender scoring</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                </tr>
+                <tr>
+                    <td> - Reportes automáticos</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+                <tr>
+                    <td> - Reportes personalizados</td>
+                    <td> <span class="em-check"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                    <td> <span class="em-cross"></span></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section id="calcWrapper">
+        <aside>
+            <h2>
+                Todos los envíos que necesitas están en emBlue
+            </h2>
+            <p>
+                Cada plan incluye una cantidad distinta de envíos por mes a través de Email, Push notifications y
+                Webhooks (*). Superado ese límite, se contarán como envíos adicionales con un costo que varía según el
+                plan.
+                <strong class="blue">No tengas miedo a los cambios de planes ni upgrades automáticos.</strong>
+            </p>
+            <img src="../img/calc-illus.svg" alt="">
+            <span class="asterisk">
+                (*)El Plan Free solo incluye email.
+            </span>
+        </aside>
+        <div id="root">
+
+        </div>
+    </section>
+    <section id="footerPlan">
+        <h3>
+            ¿No has decidido cuál es el plan ideal para tu negocio?
+        </h3>
+        <p>
+            <strong>¡Te ayudamos a descubrirlo!</strong> Déjanos tus datos para que un experto de nuestro equipo se
+            ponga en contacto contigo y te asesore con el plan que estás buscando.
+        </p>
+        <button>
+            Contacta un representante
+        </button>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

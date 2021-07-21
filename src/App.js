@@ -95,7 +95,7 @@ const StyledFormControl = withStyles({
 })(FormControl);
 function App() {
   var currencySelector = document.getElementById("currencySelector");
-  const [quantity, setQuantity] = useState(10);
+  const [quantity, setQuantity] = useState(10000);
   const [price, setPrice] = useState(0);
   const [plan, setPlan] = useState(planData.free);
   const [currency, setCurrency] = useState(currencySelector.value);

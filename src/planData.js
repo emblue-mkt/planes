@@ -1,7 +1,7 @@
 const planData = {
   free: {
     title: "Free",
-    default: 10,
+    default: 10000,
     step: 5000,
     max: 50000,
     min: 5000,

@@ -26,398 +26,300 @@
     <title>Planes</title>
 </head>
 
-<body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
     <header>
         <div>
-            <h1>
-                <span>
-                    Conoce nuestros planes y encuentra el tuyo
-                </span>
-                Tú eliges cuándo y cómo te acompañamos
-            </h1>
-            <p>
-                Planificando tu estrategia omnicanal; gestionando tu base de contactos; diseñando tus campañas; midiendo
-                tus resultados. <strong>Tu camino a la omnicanalidad comienza aquí.</strong>
-            </p>
-        </div>
-        <img src="img/header-illus.svg" />
+            <h1><span>Conoce nuestros planes y encuentra el tuyo </span>Tú eliges cuándo y cómo te acompañamos</h1>
+            <p>Planificando tu estrategia omnicanal; gestionando tu base de contactos; diseñando tus campañas; midiendo
+                tus resultados. <strong>Tu camino a la omnicanalidad comienza aquí.</strong></p>
+        </div><img src="img/header-illus.svg" />
     </header>
     <section id="planSection">
-        <h2>
-            A tu medida y en tu moneda
-        </h2>
-        <p class="introP">
-            Todos nuestros planes <strong>se facturan como decidas</strong>, de forma anual o mensual. <strong>Siempre
-                en tu moneda local</strong> y de acuerdo al valor del dólar que marque el banco central de tu país.
-            <span>¡Ahorra un 20% con tu pago anual!</span>
-        </p>
+        <h2>A tu medida y en tu moneda</h2>
+        <p class="introP">Todos nuestros planes <strong>se facturan como decidas</strong>, de forma anual o mensual.
+            <strong>Siempre en tu moneda local</strong> y de acuerdo al valor del dólar que marque el banco central de
+            tu país. <span>¡Ahorra un 20% con tu pago anual!</span></p>
         <ul id="payment">
-            <li>
-                <label for="anual" class="container"> Anual
-                    <input type="radio" id="anualPayment" name="paymentOption" value="anual" checked>
-                    <span class="checkmark"></span>
-                </label>
-            </li>
-            <li>
-                <label for="monthly" class="container"> Mensual
-                    <input type="radio" id="monthlyPayment" name="paymentOption" value="monthly">
-                    <span class="checkmark"></span>
-                </label>
-            </li>
-            <li class="customSelect">
-                <select name="currency" id="currencySelector">
-                    <option value="PY">
-                        Guaraní</option>
-                    <option value="PE">
-                        Sol Peruano </option>
-                    <option value="BR">
-                        Real Brasilero </option>
-                    <option value="UY">
-                        Peso Uruguayo </option>
-                    <option value="MX">
-                        Peso Mexicano </option>
-                    <option value="CO">
-                        Peso Colombiano </option>
-                    <option value="CL">
-                        Peso Chileno</option>
-                    <option value="BO">
-                        Peso Boliviano</option>
-                    <option value="AR">
-                        Peso Argentino</option>
-                    <option value="US" selected>
-                        $ USD
-                    </option>
-                </select>
-                <span class="customArrow"></span>
-            </li>
+            <li><label for="anual" class="container">Anual <input type="radio" id="anualPayment" name="paymentOption"
+                        value="anual" checked="checked"> <span class="checkmark"></span></label></li>
+            <li><label for="monthly" class="container">Mensual <input type="radio" id="monthlyPayment"
+                        name="paymentOption" value="monthly"> <span class="checkmark"></span></label></li>
+            <li class="customSelect"><select name="currency" id="currencySelector">
+                    <option value="PY">Guaraní</option>
+                    <option value="PE">Sol Peruano</option>
+                    <option value="BR">Real Brasilero</option>
+                    <option value="UY">Peso Uruguayo</option>
+                    <option value="MX">Peso Mexicano</option>
+                    <option value="CO">Peso Colombiano</option>
+                    <option value="CL">Peso Chileno</option>
+                    <option value="BO">Peso Boliviano</option>
+                    <option value="AR">Peso Argentino</option>
+                    <option value="US" selected="selected">$ USD</option>
+                </select> <span class="customArrow"></span></li>
         </ul>
         <ul id="planBlockContainer">
             <li id="enterpriseBlock" class="planBlock">
                 <div class="planDetails">
-                    <h3>
-                        Enterprise
-                    </h3>
+                    <h3>Enterprise</h3>
                     <div class="priceCopy">
-                        <p>
-                            <strong>Máximo acompañamiento</strong> Desde la planificación del customer journey a la
-                            medición de
-                            los resultados.
-                        </p>
-                        <span class="planPrice" id="entPrice">
-                            $1.440
-                        </span>
+                        <p><strong>Máximo acompañamiento</strong> Desde la planificación del customer journey a la
+                            medición de los resultados.</p><span class="planPrice" id="entPrice">$1.440</span>
                         <p id="entCopy"><strong>Por mes en un 1 pago anual,</strong> o desde $1.800 por mes en 12 pagos.
                         </p>
-                    </div>
-                    <button>
-                        Contacta un representante
-                    </button>
+                    </div><button>Contacta un representante</button>
+                    <div class="showCta showMore" onclick='toggleElement(document.getElementById("entPlanContent"))'>
+                        Mostrar más</div>
                 </div>
-                <section class="planBreakdown">
-
-                    <ul>
-                        <li>
-                            <h4>Incluye todo <strong>Professional</strong> y además:</h4>
-                        </li>
-                        <li>
-                            <h5>Technical leader asignado</h5> Te guía en la puesta en marcha de integraciones y
-                            activación de flujos automatizados.
-                        </li>
-                        <li>
-                            <h5>Customer journey follow up</h5> Te ayudamos a planificar una estrategia para cada etapa
-                            de los usuarios.
-                        </li>
-                        <li>
-                            <h5>Migración integral de datos</h5> Guarda toda la información de tus contactos, sus
-                            preferencias y comportamientos de hasta 5 años.
-                        </li>
-                        <li>
-                            <h5>Workshops in company</h5> Diseñados a medida para el desarrollo de tus nuevas
-                            estrategias.
-                        </li>
-                        <li>
-                            <h5>Seguimiento de campañas</h5> Deliverability team para asegurar que alcances a cada
-                            cliente a través de múltiples canales.
-                        </li>
-                    </ul>
-                </section>
-                <a href="http://" target="_blank" class="aboutLink">
-                    Acerca de Enterprise
-                </a>
+                <div class="planContentWrapper" id="entPlanContent">
+                    <section class="planBreakdown">
+                        <ul>
+                            <li>
+                                <h4>Incluye todo <strong>Professional</strong> y además:</h4>
+                            </li>
+                            <li>
+                                <h5>Technical leader asignado</h5>Te guía en la puesta en marcha de integraciones y
+                                activación de flujos automatizados.
+                            </li>
+                            <li>
+                                <h5>Customer journey follow up</h5>Te ayudamos a planificar una estrategia para cada
+                                etapa de los usuarios.
+                            </li>
+                            <li>
+                                <h5>Migración integral de datos</h5>Guarda toda la información de tus contactos, sus
+                                preferencias y comportamientos de hasta 5 años.
+                            </li>
+                            <li>
+                                <h5>Workshops in company</h5>Diseñados a medida para el desarrollo de tus nuevas
+                                estrategias.
+                            </li>
+                            <li>
+                                <h5>Seguimiento de campañas</h5>Deliverability team para asegurar que alcances a cada
+                                cliente a través de múltiples canales.
+                            </li>
+                        </ul>
+                    </section><a href="https://www.embluemail.com/brochures/comercial/plan-enterprise" target="_blank" class="aboutLink" id="aboutEnt">Acerca de Enterprise</a>
+                    <div class="showCta showLess" onclick='toggleElement(document.getElementById("entPlanContent"))'>
+                        Mostrar menos</div>
+                </div>
             </li>
             <li id="professionalBlock" class="planBlock">
                 <div class="planDetails">
-                    <h3>
-                        Professional
-                    </h3>
+                    <h3>Professional</h3>
                     <div class="priceCopy">
                         <p><strong>Damos un paso adelante</strong> Te asesoramos en la aceleración digital de tu
-                            negocio.</p>
-                        <span class="planPrice" id="proPrice">
-                            $720
-                        </span>
-
+                            negocio.</p><span class="planPrice" id="proPrice">$720</span>
                         <p id="proCopy"><strong>Por mes en un 1 pago anual,</strong> o desde $900 por mes en 12 pagos.
                         </p>
-                    </div>
-                    <button>
-                        Contacta un representante
-                    </button>
+                    </div><button>Contacta un representante</button>
+                    <div class="showCta showMore" onclick='toggleElement(document.getElementById("proPlanContent"))'>
+                        Mostrar más</div>
                 </div>
-                <section class="planBreakdown">
-
-                    <ul>
-                        <li>
-                            <h4>Incluye todo <strong>Standard</strong> y además:</h4>
-                        </li>
-                        <li>
-                            <h5>Ejecutivo de cuenta asignado</h5> Define contigo el plan de trabajo, pensando en la
-                            puesta en
-                            marcha y la innovación constante.
-
-                        </li>
-                        <li>
-                            <h5>Integraciones punta a punta</h5> Te orientamos para que todas tus plataformas se
-                            orquesten y puedas integrar múltiples
-                            canales.
-                        </li>
-                        <li>
-                            <h5>Evaluación de deliverability</h5> El equipo de tecnología mide y resguarda los
-                            resultados de todos tus envíos.
-                        </li>
-                        <li>
-                            <h5>Training y onboarding</h5> Ahorra tiempo de adopción de nuestra herramienta.
-                        </li>
-                        <li>
-                            <h5>Prioridad en la mesa de ayuda</h5> Y soporte personalizado en tu idioma 7 días a la
-                            semana.
-                        </li>
-                    </ul>
-                </section>
-                <a href="http://" target="_blank" class="aboutLink">
-                    Acerca de Professional
-                </a>
+                <div class="planContentWrapper" id="proPlanContent">
+                    <section class="planBreakdown">
+                        <ul>
+                            <li>
+                                <h4>Incluye todo <strong>Standard</strong> y además:</h4>
+                            </li>
+                            <li>
+                                <h5>Ejecutivo de cuenta asignado</h5>Define contigo el plan de trabajo, pensando en la
+                                puesta en marcha y la innovación constante.
+                            </li>
+                            <li>
+                                <h5>Integraciones punta a punta</h5>Te orientamos para que todas tus plataformas se
+                                orquesten y puedas integrar múltiples canales.
+                            </li>
+                            <li>
+                                <h5>Evaluación de deliverability</h5>El equipo de tecnología mide y resguarda los
+                                resultados de todos tus envíos.
+                            </li>
+                            <li>
+                                <h5>Training y onboarding</h5>Ahorra tiempo de adopción de nuestra herramienta.
+                            </li>
+                            <li>
+                                <h5>Prioridad en la mesa de ayuda</h5>Y soporte personalizado en tu idioma 7 días a la
+                                semana.
+                            </li>
+                        </ul>
+                    </section><a href="https://www.embluemail.com/brochures/comercial/plan-professional" target="_blank" class="aboutLink" id="aboutPro">Acerca de Professional</a>
+                    <div class="showCta showLess" onclick='toggleElement(document.getElementById("proPlanContent"))'>
+                        Mostrar menos</div>
+                </div>
             </li>
             <li id="standardBlock" class="planBlock">
                 <div class="planDetails">
-                    <h3>
-                        Standard
-                    </h3>
+                    <h3>Standard</h3>
                     <div class="priceCopy">
-                        <p>
-                            <strong>Nuestro equipo, a tu lado</strong> Asistiéndote en la implementación de tus campañas
-                            e
-                            integraciones.
-                        </p>
-                        <span class="planPrice" id="stanPrice">
-                            $144
-                        </span>
+                        <p><strong>Nuestro equipo, a tu lado</strong> Asistiéndote en la implementación de tus campañas
+                            e integraciones.</p><span class="planPrice" id="stanPrice">$144</span>
                         <p id="stanCopy"><strong>Por mes en un 1 pago anual,</strong> o desde $180 por mes en 12 pagos.
                         </p>
-                    </div>
-                    <button>
-                        Contacta un representante
-                    </button>
+                    </div><button>Contacta un representante</button>
+                    <div class="showCta showMore" onclick='toggleElement(document.getElementById("stanPlanContent"))'>
+                        Mostrar más</div>
                 </div>
-                <section class="planBreakdown">
-
-                    <ul>
-                        <li>
-                            <h4>Incluye todo <strong>Free</strong> y además:</h4>
-                        </li>
-                        <li>
-                            <h5>Agente de Customer success</h5> Durante todo el onboarding y para la implementación de
-                            tus
-                            campañas omnicanales.
-                        </li>
-                        <li>
-                            <h5>Integraciones a 1 clic</h5> Configúralo junto a Customer success y maneja toda tu
-                            información
-                            desde emBlue.
-                        </li>
-                        <li>
-                            <h5>Acceso a plataforma omnicanal</h5> Incluyendo flujos automatizados, análisis de métricas
-                            y Push Notifications.
-                        </li>
-                        <li>
-                            <h5>Diseño de un customer journey</h5> Cada mes, te ayudamos a acelerar la experiencia de
-                            los clientes con tu marca.
-                        </li>
-                    </ul>
-                </section>
-                <a href="http://" target="_blank" class="aboutLink">
-                    Acerca de Standard
-                </a>
+                <div class="planContentWrapper" id="stanPlanContent">
+                    <section class="planBreakdown">
+                        <ul>
+                            <li>
+                                <h4>Incluye todo <strong>Free</strong> y además:</h4>
+                            </li>
+                            <li>
+                                <h5>Agente de Customer success</h5>Durante todo el onboarding y para la implementación
+                                de tus campañas omnicanales.
+                            </li>
+                            <li>
+                                <h5>Integraciones a 1 clic</h5>Configúralo junto a Customer success y maneja toda tu
+                                información desde emBlue.
+                            </li>
+                            <li>
+                                <h5>Acceso a plataforma omnicanal</h5>Incluyendo flujos automatizados, análisis de
+                                métricas y Push Notifications.
+                            </li>
+                            <li>
+                                <h5>Diseño de un customer journey</h5>Cada mes, te ayudamos a acelerar la experiencia de
+                                los clientes con tu marca.
+                            </li>
+                        </ul>
+                    </section><a href="https://www.embluemail.com/brochures/comercial/plan-standard" target="_blank" class="aboutLink" id="aboutStan">Acerca de Standard</a>
+                    <div class="showCta showLess" onclick='toggleElement(document.getElementById("stanPlanContent"))'>
+                        Mostrar menos</div>
+                </div>
             </li>
             <li id="freeBlock" class="planBlock">
                 <div class="planDetails">
-                    <h3>
-                        Free
-                    </h3>
+                    <h3>Free</h3>
                     <div class="priceCopy">
-                        <p><strong>Aquí comienza el camino.</strong> Conoce el verdadero poder de tu negocio.</p>
-                        <span class="planPrice" id="freePrice">
-                            $0
-                        </span>
+                        <p><strong>Aquí comienza el camino.</strong> Conoce el verdadero poder de tu negocio.</p><span
+                            class="planPrice" id="freePrice">$0</span>
                         <p><strong>Tu primer paso</strong> hacia la omnicanalidad simple.</p>
-                    </div>
-                    <button>
-                        ¡Activar mi plan!
-                    </button>
+                    </div><button>¡Activar mi plan!</button>
+                    <div class="showCta showMore" onclick='toggleElement(document.getElementById("freePlanContent"))'>
+                        Mostrar más</div>
                 </div>
-                <section class="planBreakdown">
-
-                    <ul>
-                        <li>
-                            <h4>¡Descubre la potencia de emBlue!</h4>
-                        </li>
-                        <li>
-                            <h5>Soporte en tu idioma</h5> A través de email, teléfono o chat, todos los diías de la
-                            semana.
-                        </li>
-                        <li>
-                            <h5>Capacitaciones omnicanales</h5> 100% online y gratuitas todos los meses.
-                        </li>
-                        <li>
-                            <h5>Email, WebConnect y Pop Ups</h5> Envía mensajes personalizados y aumenta la interacción
-                            con tus
-                            clientes.
-                        </li>
-                    </ul>
-                </section>
-                <a href="http://" target="_blank" class="aboutLink">
-                    Acerca de Free
-                </a>
+                <div class="planContentWrapper" id="freePlanContent">
+                    <section class="planBreakdown">
+                        <ul>
+                            <li>
+                                <h4>¡Descubre la potencia de emBlue!</h4>
+                            </li>
+                            <li>
+                                <h5>Soporte en tu idioma</h5>A través de email, teléfono o chat, todos los diías de la
+                                semana.
+                            </li>
+                            <li>
+                                <h5>Capacitaciones omnicanales</h5>100% online y gratuitas todos los meses.
+                            </li>
+                            <li>
+                                <h5>Email, WebConnect y Pop Ups</h5>Envía mensajes personalizados y aumenta la
+                                interacción con tus clientes.
+                            </li>
+                        </ul>
+                    </section><a href="https://www.embluemail.com/brochures/comercial/plan-free" target="_blank" class="aboutLink" id="aboutFree">Acerca de Free</a>
+                    <div class="showCta showLess" onclick='toggleElement(document.getElementById("freePlanContent"))'>
+                        Mostrar menos</div>
+                </div>
             </li>
-        </ul> 
-        <button class="planFeatures">
-            Compara nuestros planes según funcionalidades
-        </button>
+        </ul>
+        
+        <span class="asterisk" id="peruPsa">*Los costos publicados no incluyen IGV.</span>
+        <button class="planFeatures">Compara nuestros planes según funcionalidades</button>
     </section>
     <section id="calcWrapper">
         <aside>
-            <h2>
-                Todos los envíos que necesitas están en emBlue
-            </h2>
-            <p>
-                Cada plan incluye una cantidad distinta de envíos por mes a través de Email, Push notifications y
+            <h2>Todos los envíos que necesitas están en emBlue</h2>
+            <p>Cada plan incluye una cantidad distinta de envíos por mes a través de Email, Push notifications y
                 Webhooks (*). Superado ese límite, se contarán como envíos adicionales con un costo que varía según el
-                plan.
-                <strong class="blue">No tengas miedo a los cambios de planes ni upgrades automáticos.</strong>
-            </p>
-            <img src="img/calc-illus.svg" alt="">
-            <span class="asterisk">
-                (*)El Plan Free solo incluye email.
-            </span>
+                plan. <strong class="blue">No tengas miedo a los cambios de planes ni upgrades automáticos.</strong></p>
+            <img src="img/calc-illus.svg" alt=""> <span class="asterisk">(*)El Plan Free solo incluye email.</span>
         </aside>
-        <div id="root">
-
+        <div id="mobiBreakdown">
+            <ul>
+                <li class="ent">
+                    <h3>Enterprise</h3>
+                    <h4>Conversaciones incluidas</h4>
+                    <p><span class="breakdownN">2.500.000 </span>Emails - Push Notifications Webhooks.</p>
+                    <h4>Costo/envíos adicionales:</h4>
+                    <p>U$D 0,72 CPM</p>
+                </li>
+                <li class="pro">
+                    <h3>Professional</h3>
+                    <h4>Conversaciones incluidas</h4>
+                    <p><span class="breakdownN">500.000 </span>Emails - Push Notifications Webhooks.</p>
+                    <h4>Costo/envíos adicionales:</h4>
+                    <p>U$D 1,80 CPM</p>
+                </li>
+                <li class="stan">
+                    <h3>Standard</h3>
+                    <h4>Conversaciones incluidas</h4>
+                    <p><span class="breakdownN">50.000 </span>Emails - Push Notifications Webhooks.</p>
+                    <h4>Costo/envíos adicionales:</h4>
+                    <p>U$D 3,60 CPM</p>
+                </li>
+                <li class="free">
+                    <h3>Free</h3>
+                    <h4>Conversaciones incluidas</h4>
+                    <p><span class="breakdownN">10.000 </span>Emails.</p>
+                    <h4>Costo/envíos adicionales:</h4>
+                    <p>U$D 3,60 CPM</p>
+                </li>
+            </ul>
         </div>
+        <div id="root"></div>
     </section>
     <div class="aditionalsContainer">
         <section id="aditionalsWrapper">
             <div class="sms">
-                <h3>
-                    ¿Quieres incluir mensajes SMS a tu estrategia omnicanal? Calcula el costo
-                </h3>
+                <h3>¿Quieres incluir mensajes SMS a tu estrategia omnicanal? Calcula el costo</h3>
                 <ul>
-                    <li class="customSelect">
-                        <label for="smsQ">
-                            ¿Cuántos SMS?
-                        </label>
-                        <div>
-                            <select name="smsQ" id="smsQ">
-                                <option value="1">
-                                    1000</option>
-                                <option value="2">
-                                    2000</option>
-                                <option value="3">
-                                    3000</option>
-                                <option value="4">
-                                    4000</option>
-                                <option value="5">
-                                    5000</option>
-                                <option value="6">
-                                    6000</option>
-                                <option value="7">
-                                    7000</option>
-                                <option value="8">
-                                    8000</option>
-                                <option value="9">
-                                    9000</option>
-                                <option value="10">
-                                    10000</option>
-                            </select>
-                            <span class="customArrow"></span>
-                        </div>
+                    <li class="customSelect"><label for="smsQ">¿Cuántos SMS?</label>
+                        <div><select name="smsQ" id="smsQ">
+                                <option value="1">1000</option>
+                                <option value="2">2000</option>
+                                <option value="3">3000</option>
+                                <option value="4">4000</option>
+                                <option value="5">5000</option>
+                                <option value="6">6000</option>
+                                <option value="7">7000</option>
+                                <option value="8">8000</option>
+                                <option value="9">9000</option>
+                                <option value="10">10000</option>
+                            </select> <span class="customArrow"></span></div>
                     </li>
-                    <li class="customSelect">
-                        <label for="smsC">
-                            Costo según país:
-                        </label>
-                        <div>
-                            <select name="smsC" id="smsC">
-                                <option value="AR" selected="selected">
-                                    Argentina </option>
-                                <option value="BR">
-                                    Brasil </option>
-                                <option value="BO">
-                                    Bolivia </option>
-                                <option value="CL">
-                                    Chile </option>
-                                <option value="CA">
-                                    Centroamérica </option>
-                                <option value="CO">
-                                    Colombia </option>
-                                <option value="EC">
-                                    Ecuador </option>
-                                <option value="MX">
-                                    México</option>
-                                <option value="PY">
-                                    Paraguay</option>
-                                <option value="PE">
-                                    Perú</option>
-                                <option value="UY">
-                                    Uruguay</option>
-                            </select>
-                            <span class="customArrow"></span>
-                        </div>
+                    <li class="customSelect"><label for="smsC">Costo según país:</label>
+                        <div><select name="smsC" id="smsC">
+                                <option value="AR" selected="selected">Argentina</option>
+                                <option value="BR">Brasil</option>
+                                <option value="BO">Bolivia</option>
+                                <option value="CL">Chile</option>
+                                <option value="CA">Centroamérica</option>
+                                <option value="CO">Colombia</option>
+                                <option value="EC">Ecuador</option>
+                                <option value="MX">México</option>
+                                <option value="PY">Paraguay</option>
+                                <option value="PE">Perú</option>
+                                <option value="UY">Uruguay</option>
+                            </select> <span class="customArrow"></span></div>
                     </li>
                     <li>
-                        <h4 id="smsV">
-                            USD 45
-                        </h4>
+                        <h4 id="smsV">USD 45</h4>
                     </li>
                 </ul>
             </div>
             <div class="onsite">
-                <h3>
-                    ¿Necesitas impresiones extra para tus Banners Pop Ups con OnSite?
-                </h3>
-                <p>
-                    Pasadas las 10.000 impresiones incluidas en tu plan, tienen un costo adicional de U$D 0,3 CPM en
-                    todos
-                    los países (*).
-                </p>
-                <span class="asterisk">
-                    <strong>(*)CPM:</strong> Costo por cada 1000 impresiones.
-                </span>
+                <h3>¿Necesitas impresiones extra para tus Banners Pop Ups con OnSite?</h3>
+                <p>Pasadas las 10.000 impresiones incluidas en tu plan, tienen un costo adicional de U$D 0,3 CPM en
+                    todos los países (*).</p><span class="asterisk"><strong>(*)CPM:</strong> Costo por cada 1000
+                    impresiones.</span>
             </div>
-        </section>
-        <img src="img/sms-illus.svg" id="smsIllus" />
+        </section><img src="img/sms-illus.svg" id="smsIllus" />
     </div>
     <section id="databaseSect">
         <aside>
-            <h2>
-                Tu base de contactos no tiene límites
-            </h2>
-            <p>
-                Suma tantos usuarios como necesites a tu base y envía mensajes personalizados a cada uno de ellos.
-                <strong>Logra más conversaciones relevantes y descubre el verdadero potencial de tu negocio. </strong>
-                <strong class="blue">Elijas el plan que elijas nosotros te damos las mejores herramientas para que cada
-                    mensaje que envías valga la pena en serio.</strong>
-            </p>
+            <h2>Tu base de contactos no tiene límites</h2>
+            <p>Suma tantos usuarios como necesites a tu base y envía mensajes personalizados a cada uno de ellos.
+                <strong>Logra más conversaciones relevantes y descubre el verdadero potencial de tu negocio.
+                </strong><strong class="blue">Elijas el plan que elijas nosotros te damos las mejores herramientas para
+                    que cada mensaje que envías valga la pena en serio.</strong></p>
         </aside>
         <ol>
             <li>
@@ -437,17 +339,16 @@
         </ol>
     </section>
     <section id="footerPlan">
-        <h3>
-            ¿No has decidido cuál es el plan ideal para tu negocio?
-        </h3>
-        <p>
-            <strong>¡Te ayudamos a descubrirlo!</strong> Déjanos tus datos para que un experto de nuestro equipo se
-            ponga en contacto contigo y te asesore con el plan que estás buscando.
-        </p>
-        <button>
-            Contacta un representante
-        </button>
+        <h3>¿No has decidido cuál es el plan ideal para tu negocio?</h3>
+        <p><strong>¡Te ayudamos a descubrirlo!</strong> Déjanos tus datos para que un experto de nuestro equipo se ponga
+            en contacto contigo y te asesore con el plan que estás buscando.</p><button>Contacta un
+            representante</button>
     </section>
+    <div id="brochureModal" class="emModal">
+        <div class="modalContent"><span id="closeBttn" class="close" onclick="closeModal()">&times;</span>
+            <div><iframe width="650" height="500" frameborder="0" id="brochureFrame" src="welcome.html"></iframe></div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 

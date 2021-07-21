@@ -11,6 +11,9 @@ body {
   width: 100%;
   height: 100%;
 }
+p{
+  font-family: "Roboto", sans-serif;
+}
 header {
   max-width: 1200px;
   margin: 0 auto;
@@ -41,10 +44,10 @@ header p {
   line-height: 135%;
   color: #58595b;
 }
-header p strong{
+header p strong {
   display: block;
 }
-header img{
+header img {
   margin-bottom: -36%;
 }
 ul {
@@ -85,7 +88,7 @@ p.introP,
   margin: 1em 0 2em;
 }
 
-#planSection span {
+#planSection p span {
   display: block;
   font-weight: bold;
 }
@@ -182,16 +185,20 @@ ul#planBlockContainer {
   column-gap: 30px;
   max-width: 1250px;
 }
-#enterpriseBlock {
+#enterpriseBlock,
+li.ent {
   --plan-color: #00ced3;
 }
-#professionalBlock {
+#professionalBlock,
+li.pro {
   --plan-color: #024c88;
 }
-#standardBlock {
+#standardBlock,
+li.stan {
   --plan-color: #fd5739;
 }
-#freeBlock {
+#freeBlock,
+li.free {
   --plan-color: #2494b3;
 }
 
@@ -213,7 +220,7 @@ ul#planBlockContainer li.planBlock {
   color: #58595b;
   padding: 50px 30px 40px;
   display: grid;
-  grid-template-rows: 4fr 7fr min-content;
+  grid-template-rows: 4fr 7fr;
   flex-basis: 0;
   flex-grow: 1;
 }
@@ -252,6 +259,8 @@ li.planBlock p {
   display: block;
 }
 .planDetails span.planPrice {
+  display: block;
+  font-weight: bold;
   color: #2f2f2f !important;
   font-family: "Montserrat", sans-serif;
   font-size: 50px;
@@ -312,6 +321,8 @@ li.planBlock p {
   border: 0;
 }
 a.aboutLink {
+  cursor: pointer;
+  display: block;
   margin: 2.25em 0 0;
   text-decoration: none;
   font-weight: 700;
@@ -406,6 +417,9 @@ span.asterisk {
   align-items: center;
   column-gap: 2em;
   margin-top: 1.5em;
+}
+#aditionalsWrapper li:last-child{
+  align-self: flex-end;
 }
 #aditionalsWrapper li label {
   display: block;
@@ -543,61 +557,383 @@ span.asterisk {
   margin: 1em 0;
   grid-column: 2;
 }
-
+div.showCtam,
+#mobiBreakdown {
+  display: none;
+}
+#planSection .asterisk{
+  color: #ffffff;
+  text-align: left;
+  margin: 2em 0 0 4em;
+  justify-self: baseline
+}
+#peruPsa{
+  display: none;
+}
 @media (max-width: 700px) {
-  div#root{
+  div#root {
     display: none;
   }
-  header, #aditionalsWrapper, #databaseSect {
+
+  #mobiBreakdown {
+    display: block;
+  }
+  #mobiBreakdown ul {
+    display: grid;
+    row-gap: 2em;
+  }
+  #mobiBreakdown h3 {
+    color: var(--plan-color);
+    font-family: "Montserrat", sans-serif;
+    font-size: 6vw;
+  }
+  #mobiBreakdown h4 {
+    font-weight: bold;
+    font-size: 15px;
+    color: #58595b;
+  }
+  #mobiBreakdown p {
+    margin: 0.5em auto;
+    max-width: 48vw;
+    font-size: 14px !important;
+    line-height: 121%;
+    text-align: center;
+    color: #58595b;
+  }
+  #mobiBreakdown span.breakdownN {
+    display: block;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 100%;
+    text-align: center;
+    color: #2f2f2f;
+  }
+  #mobiBreakdown h3::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 40vw;
+    margin: 0.5em auto;
+    background-color: #58595b;
+  }
+  div.showCta {
+    display: block;
+    text-align: left;
+    padding: 3.3vw 0 0;
+    font-size: 3.3vw;
+  }
+  .showMore {
+    border-top: 6px solid #efefef;
+  }
+  div.showCta::after {
+    content: "";
+    width: 12px;
+    height: 7px;
+    background-image: url(img/more-arrow.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: inline-block;
+  }
+  div.showLess::after {
+    transform: rotateZ(180deg);
+  }
+  header,
+  #aditionalsWrapper,
+  #databaseSect,
+  #calcWrapper {
     grid-template-columns: 1fr;
   }
-  header{
+  header {
     text-align: center;
     max-width: 82vw;
     margin: 0 auto;
   }
-  #planSection{
+  #planSection {
     text-align: center;
+    padding: 31vw 7vw 16vw;
+    margin: 0 0 14.5vw;
   }
-  header img{
+  header img {
     width: 78.7vw;
     margin-top: 14vw;
   }
-  ul#payment{
+  ul#payment {
     flex-wrap: wrap;
     column-gap: 0;
-    row-gap: 1em;
+    row-gap: 0;
+    max-width: 56vw;
   }
-  ul#payment li:first-child{
+  ul#payment li:first-child {
     flex-grow: 1;
   }
-  ul#payment li:nth-child(3){
+  ul#payment li:nth-child(3) {
     flex: 0 0 100%;
+    margin-top: 8vw;
   }
-  label.container{
+  label.container {
     text-align: left;
   }
-  span.customArrow{
+  span.customArrow {
     right: 5%;
   }
-  #planSection select, #aditionalsWrapper select{
+  #planSection select,
+  #aditionalsWrapper select {
     width: 100%;
   }
+  ul#planBlockContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 70vw;
+  }
+  ul#planBlockContainer li:not(:last-child) {
+    margin-bottom: 6vw;
+  }
+
+  li.planBlock p:first-child {
+    display: none;
+  }
+  .priceCopy,
+  ul#planBlockContainer li.planBlock {
+    grid-template-rows: auto;
+  }
+  ul#planBlockContainer li.planBlock {
+    padding: 9.6vw 7.9vw 6.5vw;
+  }
+  li.planBlock h3::after {
+    margin: 4vw 0;
+  }
+  .priceCopy {
+    row-gap: 5vw;
+  }
+  .planBlock button {
+    width: 52vw;
+    margin: 5vw auto 9vw;
+  }
+  .planBreakdown ul {
+    grid-auto-rows: auto;
+  }
+  /*50 px*/
+  .planDetails span.planPrice {
+    font-size: 12vw;
+  }
   /*37 px*/
-  header h1{
+  header h1,
+  #calcWrapper h2 {
     font-size: 8.9vw;
   }
   /*30 px*/
-  #planSection h2{
+  #planSection h2,
+  li.planBlock h3,
+  #footerPlan h3 {
     font-size: 7.2vw;
   }
+  /*23 px*/
+  #aditionalsWrapper h3 {
+    font-size: 5.5vw;
+  }
   /*17 px*/
-  header h1 span, header p{
+  header h1 span,
+  header p,
+  #calcWrapper p,
+  #footerPlan p,
+  .planBreakdown h4 {
     font-size: 4vw;
   }
+  /*15 px*/
+  .planBreakdown li {
+    font-size: 3.6vw;
+    padding: 7vw 0;
+  }
   /*14 px*/
-  p.introP{
+  p.introP,
+  #aditionalsWrapper .onsite p {
     font-size: 3.38vw;
   }
+  /*13 px*/
+  li.planBlock p {
+    font-size: 3.1vw;
+  }
+  /*12 px*/
+  button.planFeatures {
+    font-size: 2.8vw;
+  }
+  /*11 px*/
+  .planDetails span.planPrice::before {
+    font-size: 2.6vw;
+  }
+  p.introP {
+    width: 78vw;
+    margin: 3.8vw 0 14vw;
+    line-height: 130%;
+  }
+  button.planFeatures {
+    padding: 1em 3vw;
+  }
+  #calcWrapper,
+  #databaseSect {
+    text-align: center;
+    max-width: 82vw;
+  }
+  #calcWrapper p,
+  #aditionalsWrapper h3,
+  #aditionalsWrapper .onsite p,
+  #databaseSect aside p {
+    text-align: center;
+  }
+  #calcWrapper aside img,
+  #calcWrapper aside span.asterisk,
+  #aditionalsWrapper .onsite .asterisk,
+  #databaseSect ol,
+  #databaseSect::before {
+    display: none;
+  }
+  #aditionalsWrapper {
+    border-radius: 0;
+    padding: 14.5vw 9.5vw 30vw;
+  }
+  #aditionalsWrapper ul {
+    flex-direction: column;
+  }
+  #aditionalsWrapper ul li:nth-child(2) {
+    margin: 7.2vw 0;
+  }
+  #aditionalsWrapper ul li {
+    width: 56vw;
+  }
+  #aditionalsWrapper li h4 {
+    text-align: center;
+    font-size: 8.4vw;
+  }
+  #aditionalsWrapper div.onsite::before {
+    height: 1px;
+    width: 100%;
+    position: initial;
+    margin: 10vw 0;
+  }
+  #smsIllus {
+    width: 70vw;
+    margin: -30% 20% 0;
+  }
+  #databaseSect aside p::after {
+    display: block;
+    position: initial;
+    margin: 8.4vw auto 0;
+    width: 6.2vw;
+    height: 4.8vw;
+  }
+  #databaseSect aside p {
+    margin: 4.8vw auto 0;
+  }
+  #footerPlan {
+    padding: 12vw 8vw;
+  }
+  #footerPlan p {
+    margin: 6.5vw 8.9vw;
+  }
+  div.planContentWrapper {
+    height: 0px;
+    transition: height 0.3s ease;
+    overflow: hidden;
+    text-align: left;
+  }
+  .planBreakdown ul {
+    border-top: 0;
+  }
+  .fit-38px,
+  .fit-40px {
+    font-size: 8.4vw !important;
+  }
+  .fit-35px {
+    font-size: 8vw !important;
+  }
+  a.aboutLink {
+    display: block;
+    margin: 6.5vw 0 10vw;
+  }
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ffffff!important;
+  }
+}
+@media (min-width: 700px) {
+  .showMore, .showLess {
+    display: none;
+  }
+  .priceCopy p:last-child{
+    min-height: 60px;
+  }
+  div.planContentWrapper{
+    display: grid;
+  }
+  div.planContentWrapper .aboutLink{
+    align-self: end;
+  }
+}
 
+/* Modal */
+.emModal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modalContent div {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.modalContent {
+  position: relative;
+  margin: 3% auto;
+  background-color: #fff;
+  width: 50%;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.3);
+  padding: 1em 2em;
+  border-radius: 10px;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+.modalContent .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+.modalContent .close:hover,
+.modalContent .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+#mobiVer {
+  display: block;
+  margin: 1em 0 0;
+  border-bottom: 1px solid #000;
+  width: max-content;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  #brochureModal {
+    display: none;
+  }
 }
