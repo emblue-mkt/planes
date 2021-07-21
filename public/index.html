@@ -146,7 +146,7 @@
                             </li>
                         </ul>
                     </section>
-                    <a href="http://" target="_blank" class="aboutLink">
+                    <a class="aboutLink" id="aboutEnt">
                         Acerca de Enterprise
                     </a>
                     <div class="showCta showLess" onclick="toggleElement(document.getElementById('entPlanContent'))">
@@ -207,7 +207,7 @@
                             </li>
                         </ul>
                     </section>
-                    <a href="http://" target="_blank" class="aboutLink">
+                    <a class="aboutLink" id="aboutPro">
                         Acerca de Professional
                     </a>
                     <div class="showCta showLess" onclick="toggleElement(document.getElementById('proPlanContent'))">
@@ -269,7 +269,7 @@
                             </li>
                         </ul>
                     </section>
-                    <a href="http://" target="_blank" class="aboutLink">
+                    <a class="aboutLink" id="aboutStan">
                         Acerca de Standard
                     </a>
                     <div class="showCta showLess" onclick="toggleElement(document.getElementById('stanPlanContent'))">
@@ -320,7 +320,7 @@
                             </li>
                         </ul>
                     </section>
-                    <a href="http://" target="_blank" class="aboutLink">
+                    <a class="aboutLink" id="aboutFree">
                         Acerca de Free
                     </a>
                     <div class="showCta showLess" onclick="toggleElement(document.getElementById('freePlanContent'))">
@@ -351,6 +351,106 @@
                 (*)El Plan Free solo incluye email.
             </span>
         </aside>
+        <div id="mobiBreakdown">
+            <ul>
+                <li class="ent">
+                    <h3>
+                        Enterprise
+                    </h3>
+                    <h4>
+                        Conversaciones incluidas
+
+                    </h4>
+                    <p>
+                        <span class="breakdownN">
+                            2.500.000
+                        </span>
+                        Emails - Push Notifications
+                        Webhooks.
+                    </p>
+                    <h4>
+                        Costo/envíos adicionales:
+                    </h4>
+                    <p>
+                        U$D 0,72 CPM
+                    </p>
+                </li>
+                <li class="pro">
+                    <h3>
+                        Professional
+
+                    </h3>
+                    <h4>
+                        Conversaciones incluidas
+
+                    </h4>
+                    <p>
+                        <span class="breakdownN">
+                            500.000
+
+                        </span>
+                        Emails - Push Notifications
+                        Webhooks.
+                    </p>
+                    <h4>
+                        Costo/envíos adicionales:
+                    </h4>
+                    <p>
+                        U$D 1,80 CPM
+
+
+                    </p>
+                </li>
+                <li class="stan">
+                    <h3>
+                        Standard
+
+                    </h3>
+                    <h4>
+                        Conversaciones incluidas
+
+                    </h4>
+                    <p>
+                        <span class="breakdownN">
+                            50.000
+
+                        </span>
+                        Emails - Push Notifications
+                        Webhooks.
+                    </p>
+                    <h4>
+                        Costo/envíos adicionales:
+                    </h4>
+                    <p>
+                        U$D 3,60 CPM
+
+
+                    </p>
+                </li>
+                <li class="free">
+                    <h3>
+                        Free
+                    </h3>
+                    <h4>
+                        Conversaciones incluidas
+
+                    </h4>
+                    <p>
+                        <span class="breakdownN">
+                            10.000
+
+                        </span>
+                        Emails.
+                    </p>
+                    <h4>
+                        Costo/envíos adicionales:
+                    </h4>
+                    <p>
+                        U$D 3,60 CPM
+                    </p>
+                </li>
+            </ul>
+        </div>
         <div id="root">
 
         </div>
@@ -488,6 +588,14 @@
             Contacta un representante
         </button>
     </section>
+    <div id="brochureModal" class="emModal">
+        <div class="modalContent">
+            <span id="closeBttn" class="close" onclick="closeModal()">&times;</span>
+            <div>
+                <iframe width="650" height="500" frameborder="0" id="brochureFrame" src="welcome.html"></iframe>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 

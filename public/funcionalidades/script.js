@@ -49,29 +49,49 @@ var proCopy = document.getElementById("proCopy");
 var stanPrice = document.getElementById("stanPrice");
 var stanCopy = document.getElementById("stanCopy");
 var freePrice = document.getElementById("freePrice");
-// Calculadora SMS
-var smsCountry = document.getElementById("smsC");
-var smsQuantity = document.getElementById("smsQ");
-var smsValue = document.getElementById("smsV");
 
+// Selector Plan Mobile 
+var planSelector = document.getElementById("planSelector");
+var priceTable = document.getElementById("priceTable");
+var planSpecs = document.getElementById("planSpecs");
+var breakdownTables = document.getElementsByClassName("breakdown");
+window.onload = () => {
+  if(document.documentElement.clientWidth < 700){
+    handlePlanChange();
+  }
+}
 // Logica planSection
-
 anualPayment.onchange = () => handlePaymentChange();
 monthlyPayment.onchange = () => handlePaymentChange();
 currencySelector.onchange = () => handlePaymentChange();
+planSelector.onchange = () => handlePlanChange();
 
 function handlePaymentChange() {
   setPrices(anualPayment.checked ? "anual" : "monthly");
-  smsCountry.value = currencySelector.value;
-  handleSMSChange();
   setFontSizes(currencySelector.value);
 }
 
+function handlePlanChange(){
+  clearClasses();
+  setColumns(planSelector.value);
+}
+function setColumns(opt){
+  handleTables(opt)
+}
+function handleTables(opt){
+  priceTable.classList.add("price-"+opt);
+  planSpecs.classList.add("data-"+opt);
+  Array.from(breakdownTables).forEach(el => el.classList.add("data-"+opt));
+}
+function clearClasses(){
+  planSpecs.className = '';
+  priceTable.className = '';
+  Array.from(breakdownTables).forEach(el => el.className = 'breakdown');
+}
+
 function setFontSizes(opt){
-  if(opt === "PY"){
+  if(opt === "PY" || opt === "AR"){
     addFontClass("fit-35px");
-  }else if(opt === "AR"){
-    addFontClass("fit-38px");
   }else if(opt === "CL" || opt === "CO"){
     addFontClass("fit-40px");
   }else{
@@ -157,66 +177,6 @@ function getCopy(opt, price) {
     : `<strong>Por mes en 12 pagos</strong> o desde ${price} por mes en 1 pago anual`;
 }
 
-// Logica SMS
-
-var smsInfo = [
-  {
-    countryCode: "AR",
-    cpm: 45,
-  },
-  {
-    countryCode: "PE",
-    cpm: 45,
-  },
-  {
-    countryCode: "UY",
-    cpm: 88,
-  },
-  {
-    countryCode: "PY",
-    cpm: 29,
-  },
-  {
-    countryCode: "MX",
-    cpm: 26,
-  },
-  {
-    countryCode: "EC",
-    cpm: 150,
-  },
-  {
-    countryCode: "CO",
-    cpm: 3.5,
-  },
-  {
-    countryCode: "CA",
-    cpm: 59,
-  },
-  {
-    countryCode: "CL",
-    cpm: 30,
-  },
-  {
-    countryCode: "BR",
-    cpm: 108,
-  },
-  {
-    countryCode: "BO",
-    cpm: 108,
-  },
-];
-
-smsCountry.onchange = () => handleSMSChange();
-smsQuantity.onchange = () => handleSMSChange();
-
-function getCpm(country) {
-  var country = smsInfo.find(({ countryCode }) => countryCode === country);
-  return country.cpm;
-}
-
-function handleSMSChange() {
-  smsValue.innerHTML = `USD ${getCpm(smsCountry.value) * smsQuantity.value}`;
-}
 
 
 const toggleElement = (el) => {
@@ -226,46 +186,3 @@ const toggleElement = (el) => {
     el.style.height = '0px'
   }
 }
-
-//Modals
-
-var modal = document.getElementById("brochureModal");
-var brochureFrame = document.getElementById("brochureFrame");
-
-var aboutEnt = document.getElementById("aboutEnt");
-var aboutPro = document.getElementById("aboutPro");
-var aboutStan = document.getElementById("aboutStan");
-var aboutFree = document.getElementById("aboutFree");
-
-
-
-function openModal(src) {
-  brochureFrame.src = src;
-  modal.style.display = "block";
-}
-function closeModal() {
-  modal.style.display = "none";
-}
-
-window.onclick = (event) => {
-  if (event.target == modal) {
-    closeModal();
-  }
-};
-
-aboutEnt.addEventListener("click", () => {
-  var src = "https://www.embluemail.com/brochures/comercial/plan-enterprise";
-  openModal(src);
-});
-aboutPro.addEventListener("click", () => {
-  var src = "https://www.embluemail.com/brochures/comercial/plan-professional";
-  openModal(src);
-});
-aboutStan.addEventListener("click", () => {
-  var src = "https://www.embluemail.com/brochures/comercial/plan-standard";
-  openModal(src);
-});
-aboutFree.addEventListener("click", () => {
-  var src = "https://www.embluemail.com/brochures/comercial/plan-free";
-  openModal(src);
-});
