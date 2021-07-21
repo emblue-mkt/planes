@@ -103,8 +103,13 @@ function App() {
   const [plan, setPlan] = useState(planData.free);
   const [currency, setCurrency] = useState(currencySelector.value);
   const [isAnual, setIsAnual] = useState(true);
-  const [displayPrice, _setDisplayPrice] = useState("$0");
-  const [basePrice, setBasePrice] = useState(0);
+  const [displayPrice, _setDisplayPrice] = "$0";
+
+  var basePrice = isAnual ? plan.anualPrice : plan.monthlyPrice;
+  /*   var displayPrice =
+    quantity > plan.included
+      ? basePrice + (plan.extraCpm * (quantity - plan.included)) / 1000
+      : basePrice; */
 
   currencySelector.addEventListener("change", (e) =>
     setCurrency(e.target.value)
@@ -119,9 +124,8 @@ function App() {
   const handlePaymentChange = (e) => {
     var value = e.target.value === "anual" ? true : false;
     setIsAnual(value);
-    setBasePrice(value ? plan.anualPrice : plan.monthlyPrice);
+    setPrice(displayPrice);
   };
-
   const handlePlanChange = (e) => {
     var opt = e.target.value;
     var newPlan =
@@ -138,16 +142,11 @@ function App() {
     setPrice(isAnual ? newPlan.anualPrice : newPlan.monthlyPrice);
     setQuantity(newPlan.included);
   };
-  
   const handleSliderChange = (e, val) => {
     setQuantity(val);
     setPrice(displayPrice);
   };
-  const updatePrice = (val) => {
-    var updatedPrice = val > plan.included ? basePrice + (plan.extraCpm * (quantity - plan.included)) / 1000 : basePrice;
-    setPrice(updatedPrice);
-    _setDisplayPrice(getPrice(currency, val));
-  };
+
   return (
     <Container>
       <Heading>Definamos cual es tu plan ideal</Heading>
@@ -208,7 +207,7 @@ function App() {
         <div style={{ flexGrow: 1 }}>
           <BlueHeading>Plan {plan.title}:</BlueHeading>
           <PriceText>
-            Desde <Price>{displayPrice}</Price> por mes{" "}
+            Desde <Price>{getPrice(currency, price)}</Price> por mes{" "}
             {isAnual ? `en un (1) pago anual` : `en 12 pagos`}{" "}
             <span style={{ color: "#FD5739" }}>(*)</span>
           </PriceText>
