@@ -52,6 +52,7 @@ const planData = {
         label: "50k",
       },
     ],
+    contactLink: "https://buy.embluemail.com/form-ec/login-ecommerce.php?plan=free&utm_source="
   },
   standard: {
     title: "Standard",
@@ -106,6 +107,7 @@ const planData = {
         label: "450k",
       },
     ],
+    contactLink: "https://buy.embluemail.com/form-ec/login-ecommerce.php?plan=standard&utm_source="
   },
   professional: {
     title: "Professional",
@@ -144,6 +146,7 @@ const planData = {
         label: "2500k",
       },
     ],
+    contactLink: "https://buy.embluemail.com/form-ec/login-ecommerce.php?plan=professional&utm_source="
   },
   enterprise: {
     title: "Enterprise",
@@ -181,6 +184,7 @@ const planData = {
         label: "5000k",
       },
     ],
+    contactLink: "https://buy.embluemail.com/form-ec/login-ecommerce.php?plan=enterprise&utm_source="
   },
 };
 

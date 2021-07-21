@@ -339,7 +339,10 @@ button.planFeatures {
   border-radius: 30px;
   margin: 4.5em 0 0;
 }
-
+button.planFeatures a{
+  color: #ffffff;
+  text-decoration: none;
+}
 #calcWrapper,
 #databaseSect {
   margin: 0 auto 4.5em;

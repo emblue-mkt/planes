@@ -6,7 +6,7 @@ import {
   RadioGroup,
   FormControlLabel,
   FormControl,
-  withStyles
+  withStyles,
 } from "@material-ui/core";
 import StyledRadio from "./components/StyledRadio";
 import CustomSlider from "./components/CustomSlider";
@@ -75,9 +75,13 @@ const PriceText = styled.span`
   line-height: 13px;
   color: #000000;
 `;
+const Hyperlink = styled.a`
+  text-decoration: none;
+  color: #fff;
+`;
 const StyledButton = styled.button`
   border: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
   letter-spacing: 0.01em;
   color: #ffffff;
@@ -87,11 +91,11 @@ const StyledButton = styled.button`
   align-self: flex-end;
 `;
 const StyledFormControl = withStyles({
-  root:{
+  root: {
     width: "100%",
     borderTop: "2px solid #999999",
-    borderBottom: "2px solid #999999"
-  }
+    borderBottom: "2px solid #999999",
+  },
 })(FormControl);
 function App() {
   var currencySelector = document.getElementById("currencySelector");
@@ -183,14 +187,16 @@ function App() {
         </FormWrapper>
       </StyledFormControl>
       <PriceWrapper>
-        <div style={{flexGrow: 1}}>
+        <div style={{ flexGrow: 1 }}>
           <BlueHeading>Plan {plan.title}:</BlueHeading>
           <PriceText>
             Desde <Price>{getPrice(currency, price)}</Price> por mes en un (1)
             pago anual <span style={{ color: "#FD5739" }}>(*)</span>
           </PriceText>
         </div>
-        <StyledButton>Contacta a un representante</StyledButton>
+        <Hyperlink href={plan.contactLink} target="_blank">
+          <StyledButton>Contacta a un representante</StyledButton>
+        </Hyperlink>
       </PriceWrapper>
     </Container>
   );
