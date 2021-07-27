@@ -11,7 +11,7 @@ import {
 import StyledRadio from "./components/StyledRadio";
 import CustomSlider from "./components/CustomSlider";
 import planData from "./planData";
-import { getPrice } from "./utils";
+import { getPrice, urlAddon } from "./utils";
 
 const Heading = styled.h3`
   font-family: "Montserrat", sans-serif;
@@ -194,8 +194,11 @@ function App() {
             pago anual <span style={{ color: "#FD5739" }}>(*)</span>
           </PriceText>
         </div>
-        <Hyperlink href={plan.contactLink} target="_blank">
-          <StyledButton>Contacta a un representante</StyledButton>
+        <Hyperlink href={plan.contactLink + urlAddon} id="calcContactBttn" target="_blank">
+          <StyledButton>
+                  { plan.title ==="Free" ? "¡Activar mi plan!" : "Contacta a un representante" }
+
+          </StyledButton>
         </Hyperlink>
       </PriceWrapper>
     </Container>

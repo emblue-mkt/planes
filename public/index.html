@@ -3,30 +3,89 @@
 
 <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    <meta name="description"
+        content="Conoce los planes de emBlue que harán despegar tu negocio y el alcance que deseas conseguir ¡Tu eliges cómo crear tu estrategia omnicanal!" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <link rel="stylesheet" href="style.css">
-    <title>Planes</title>
+    <link rel="stylesheet" href="faqs.css">
+    <link rel="stylesheet" href="https://www.embluemail.com/styles/new-header.css">
+    <link rel="stylesheet" href="https://www.embluemail.com/styles/prefooter-seo-v1-0.css">
+    <title>Planes - emBlue</title>
 </head>
 
 <body><noscript>You need to enable JavaScript to run this app.</noscript>
+    <nav class="fwidth">
+        <a href="https://www.embluemail.com/"><img src="https://www.embluemail.com/images/emblue-logo.svg" alt="emBlue"
+                class="logo" /></a>
+        <div class="items">
+            <ul>
+                <li>
+                    Nuestra Plataforma
+                    <ul class="dropdown">
+                        <li>
+                            <a href="https://www.embluemail.com/automation.html" target="_blank">Automatización</a>
+                        </li>
+                        <li>
+                            <a href="https://www.embluemail.com/integrations.html" target="_blank">Integración con
+                                plataformas</a>
+                        </li>
+                        <li>
+                            <a href="https://www.embluemail.com/email-marketing-and-web-connect.html" target="_blank"
+                                title="Email Marketing y web connect">Email Marketing y web connect</a>
+                        </li>
+                        <li><a href="https://www.embluemail.com/sms-masivo.html" target="_blank">Sms</a></li>
+                        <li>
+                            <a href="https://www.embluemail.com/push-notifications.html" target="_blank">Push
+                                Notifications</a>
+                        </li>
+                        <li>
+                            <a href="https://www.embluemail.com/remarketing.html" target="_blank">Remarketing</a>
+                        </li>
+                        <li>
+                            <a href="https://www.embluemail.com/drag-and-drop.html" target="_blank">Drag and drop</a>
+                        </li>
+                        <li><a href="https://www.embluemail.com/onsite.html" target="_blank">OnSite</a></li>
+                        <li>
+                            <a href="https://www.embluemail.com/whatsapp-marketing.html" target="_blank">Whatsapp</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://www.embluemail.com/servicios.html" target="_blank" title="Servicios">Servicios</a>
+                </li>
+                <li>
+                    <a href="https://www.embluemail.com/planes.html" target="_blank" title="Planes">Planes</a>
+                </li>
+                <li>
+                    <a href="https://www.embluemail.com/sobre-emblue-email-marketing.html" target="_blank"
+                        title="Por qué emBlue">Por qué emBlue</a>
+                </li>
+                <li>
+                    <a href="https://www.embluemail.com/casos-de-exito.html" target="_blank"
+                        title="Casos de éxito">Casos de
+                        éxito</a>
+                </li>
+                <li>
+                    <a href="https://www.embluemail.com/cultura.html" target="_blank" title="Cultura">Cultura</a>
+                </li>
+            </ul>
+            <a href="https://www.embluemail.com/planes.html" target="_blank" title="Prueba emBlue">
+                <button class="trial">Prueba emBlue</button>
+            </a>
+            <a href="https://app.embluemail.com/" class="login" target="_blank" title="Login →">Login
+            </a>
+        </div>
+        <span><a href="https://www.embluemail.com/pt/" target="_blank">PT</a> -
+            <a href="https://www.embluemail.com/en/" target="_blank">EN</a>
+        </span>
+        <div class="toggleIcon" onclick="toggleMenu(this)">
+            <div class="top"></div>
+            <div class="mid"></div>
+            <div class="bot"></div>
+        </div>
+    </nav>
     <header>
         <div>
             <h1><span>Conoce nuestros planes y encuentra el tuyo </span>Tú eliges cuándo y cómo te acompañamos</h1>
@@ -38,7 +97,8 @@
         <h2>A tu medida y en tu moneda</h2>
         <p class="introP">Todos nuestros planes <strong>se facturan como decidas</strong>, de forma anual o mensual.
             <strong>Siempre en tu moneda local</strong> y de acuerdo al valor del dólar que marque el banco central de
-            tu país. <span>¡Ahorra un 20% con tu pago anual!</span></p>
+            tu país. <span>¡Ahorra un 20% con tu pago anual!</span>
+        </p>
         <ul id="payment">
             <li><label for="anual" class="container">Anual <input type="radio" id="anualPayment" name="paymentOption"
                         value="anual" checked="checked"> <span class="checkmark"></span></label></li>
@@ -66,7 +126,9 @@
                             medición de los resultados.</p><span class="planPrice" id="entPrice">$1.440</span>
                         <p id="entCopy"><strong>Por mes en un 1 pago anual,</strong> o desde $1.800 por mes en 12 pagos.
                         </p>
-                    </div><button>Contacta un representante</button>
+                    </div><a href="https://buy.embluemail.com/form-ec/login-ecommerce.php?plan=enterprise"
+                        class="contactBttn">
+                        <button>Contacta un representante</button></a>
                     <div class="showCta showMore" onclick='toggleElement(document.getElementById("entPlanContent"))'>
                         Mostrar más</div>
                 </div>
@@ -97,7 +159,8 @@
                                 cliente a través de múltiples canales.
                             </li>
                         </ul>
-                    </section><a href="https://www.embluemail.com/brochures/comercial/plan-enterprise" target="_blank" class="aboutLink" id="aboutEnt">Acerca de Enterprise</a>
+                    </section><a href="https://www.embluemail.com/brochures/comercial/plan-enterprise" target="_blank"
+                        class="aboutLink" id="aboutEnt">Acerca de Enterprise</a>
                     <div class="showCta showLess" onclick='toggleElement(document.getElementById("entPlanContent"))'>
                         Mostrar menos</div>
                 </div>
@@ -110,7 +173,10 @@
                             negocio.</p><span class="planPrice" id="proPrice">$720</span>
                         <p id="proCopy"><strong>Por mes en un 1 pago anual,</strong> o desde $900 por mes en 12 pagos.
                         </p>
-                    </div><button>Contacta un representante</button>
+                    </div>
+                    <a href="https://buy.embluemail.com/form-ec/login-ecommerce.php?plan=professional"
+                        class="contactBttn">
+                        <button>Contacta un representante</button></a>
                     <div class="showCta showMore" onclick='toggleElement(document.getElementById("proPlanContent"))'>
                         Mostrar más</div>
                 </div>
@@ -140,7 +206,8 @@
                                 semana.
                             </li>
                         </ul>
-                    </section><a href="https://www.embluemail.com/brochures/comercial/plan-professional" target="_blank" class="aboutLink" id="aboutPro">Acerca de Professional</a>
+                    </section><a href="https://www.embluemail.com/brochures/comercial/plan-professional" target="_blank"
+                        class="aboutLink" id="aboutPro">Acerca de Professional</a>
                     <div class="showCta showLess" onclick='toggleElement(document.getElementById("proPlanContent"))'>
                         Mostrar menos</div>
                 </div>
@@ -153,7 +220,9 @@
                             e integraciones.</p><span class="planPrice" id="stanPrice">$144</span>
                         <p id="stanCopy"><strong>Por mes en un 1 pago anual,</strong> o desde $180 por mes en 12 pagos.
                         </p>
-                    </div><button>Contacta un representante</button>
+                    </div>
+                    <a href="https://buy.embluemail.com/form-ec/login-ecommerce.php?plan=standard" class="contactBttn">
+                        <button>Contacta un representante</button></a>
                     <div class="showCta showMore" onclick='toggleElement(document.getElementById("stanPlanContent"))'>
                         Mostrar más</div>
                 </div>
@@ -180,7 +249,8 @@
                                 los clientes con tu marca.
                             </li>
                         </ul>
-                    </section><a href="https://www.embluemail.com/brochures/comercial/plan-standard" target="_blank" class="aboutLink" id="aboutStan">Acerca de Standard</a>
+                    </section><a href="https://www.embluemail.com/brochures/comercial/plan-standard" target="_blank"
+                        class="aboutLink" id="aboutStan">Acerca de Standard</a>
                     <div class="showCta showLess" onclick='toggleElement(document.getElementById("stanPlanContent"))'>
                         Mostrar menos</div>
                 </div>
@@ -192,7 +262,9 @@
                         <p><strong>Aquí comienza el camino.</strong> Conoce el verdadero poder de tu negocio.</p><span
                             class="planPrice" id="freePrice">$0</span>
                         <p><strong>Tu primer paso</strong> hacia la omnicanalidad simple.</p>
-                    </div><button>¡Activar mi plan!</button>
+                    </div>
+                    <a href="https://buy.embluemail.com/form-ec/login-ecommerce.php?plan=free" class="contactBttn">
+                        <button>¡Activar mi plan!</button></a>
                     <div class="showCta showMore" onclick='toggleElement(document.getElementById("freePlanContent"))'>
                         Mostrar más</div>
                 </div>
@@ -214,19 +286,14 @@
                                 interacción con tus clientes.
                             </li>
                         </ul>
-                    </section><a href="https://www.embluemail.com/brochures/comercial/plan-free" target="_blank" class="aboutLink" id="aboutFree">Acerca de Free</a>
+                    </section><a href="https://www.embluemail.com/brochures/comercial/plan-free" target="_blank"
+                        class="aboutLink" id="aboutFree">Acerca de Free</a>
                     <div class="showCta showLess" onclick='toggleElement(document.getElementById("freePlanContent"))'>
                         Mostrar menos</div>
                 </div>
             </li>
-        </ul>
-        
-        <span class="asterisk" id="peruPsa">*Los costos publicados no incluyen IGV.</span>
-        <button class="planFeatures">
-            <a href="./funcionalidades/">
-                Compara nuestros planes según funcionalidades
-            </a>
-        </button>
+        </ul><span class="asterisk" id="peruPsa">*Los costos publicados no incluyen IGV.</span> <button
+            class="planFeatures"><a href="./funcionalidades/">Compara nuestros planes según funcionalidades</a></button>
     </section>
     <section id="calcWrapper">
         <aside>
@@ -323,7 +390,8 @@
             <p>Suma tantos usuarios como necesites a tu base y envía mensajes personalizados a cada uno de ellos.
                 <strong>Logra más conversaciones relevantes y descubre el verdadero potencial de tu negocio.
                 </strong><strong class="blue">Elijas el plan que elijas nosotros te damos las mejores herramientas para
-                    que cada mensaje que envías valga la pena en serio.</strong></p>
+                    que cada mensaje que envías valga la pena en serio.</strong>
+            </p>
         </aside>
         <ol>
             <li>
@@ -348,12 +416,426 @@
             en contacto contigo y te asesore con el plan que estás buscando.</p><button>Contacta un
             representante</button>
     </section>
-    <div id="brochureModal" class="emModal">
-        <div class="modalContent"><span id="closeBttn" class="close" onclick="closeModal()">&times;</span>
-            <div><iframe width="650" height="500" frameborder="0" id="brochureFrame" src="welcome.html"></iframe></div>
+    <section id="faqs">
+        <h3>Preguntas frecuentes</h3>
+        <ul id="faqsContainer">
+            <li class="faqItem">
+                <h5>Entonces: ¿emBlue es sólo una plataforma de email marketing?</h5>
+                <div class="faqContent">
+                    <p>¡Claro que no! emBlue es una plataforma omnicanal que ofrece la <strong>integración y
+                            automatización</strong> de
+                        múltiples canales: email marketing, SMS, Push Notifications, Pop Ups, WhatsApp pop ups y Net
+                        Promoter Score.
+                        Además, todos nuestros equipos están listos para acompañarte en lo que necesites: desde la
+                        planificación de la
+                        estrategia hasta la gestión y el diseño de tus campañas.</p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>¿Cómo hago para configurar la cuenta y la plataforma según lo que necesito?</h5>
+                <div class="faqContent">
+                    <p>¡Para eso están el equipo de Customer Success (plan Standard) y el ejecutivo de cuentas (Pro y
+                        Enterprise)! Ellos
+                        se ocupan de acompañarte durante todo el proceso de onboarding y la configuración de la cuenta
+                        para dejarla a
+                        medida de tu negocio.</p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>Yo elegí un plan Free, ¿igual voy a recibir ayuda en la apertura y configuración de mi cuenta?</h5>
+                <div class="faqContent">
+                    <p>¡Obvio que sí! Nuestro equipo de soporte está listo para ayudarte a través de email, teléfono o
+                        chat. Y, además,
+                        te ofrecemos capacitaciones gratuitas todas las semanas para que puedas despejar cualquier duda
+                        sobre el uso de
+                        la plataforma.</p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>¿Cómo sé cuál es el plan ideal de acuerdo a mis necesidades?</h5>
+                <div class="faqContent">
+                    <p> Nuestros planes ofrecen distintos grados de <strong>acompañamiento personalizado</strong>, que
+                        va desde la
+                        planificación de tu estrategia hasta el diseño y envío de tus campañas o la medición de sus
+                        resultados.
+                        <br><br>Si aún no tienes <strong>100% claro</strong> qué es lo que tu negocio necesita, puedes
+                        <a href="https://api.whatsapp.com/send?phone=541120400928&text=&source=&data=&app_absent="
+                            target="_blank">conversar ahora mismo</a> con uno de nuestros representantes que te
+                        asesorará y responderá a
+                        todas tus preguntas.
+                    </p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>¿Qué sucede si necesito una feature que no está incluida en mi plan?</h5>
+                <div class="faqContent">
+                    <p>No hay problema, puedes <strong>personalizar cualquiera de nuestros planes</strong> de acuerdo a
+                        tus necesidades
+                        específicas <strong>abonando sólo por ese adicional</strong>. Lo único que debes hacer es <a
+                            href="mailto:soporte@embluemail.com" target="_blank">ponerte en contacto</a> con uno de
+                        nuestros
+                        representantes para que te ayude.</p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>¿Es posible dar de alta una cuenta con tarjeta de crédito? ¿El débito automático se realiza por
+                    tarjeta de
+                    crédito o CBU?</h5>
+                <div class="faqContent">
+                    <p> Actualmente ​se puede dar de alta un plan con tarjeta de crédito a​ ​​través de ​M​ercado​
+                        ​​P​ago​ en México,
+                        Argentina, Colombia, Chile y Perú.​ Sino, las altas ​también ​se realizan a través de un CBU, de
+                        cuenta a
+                        corriente a cuenta corriente, para lo que necesitaremos los siguientes datos:
+                    <ul>
+                        <li>Número de CBU.</li>
+                        <li>Razón Social del titular de la cuenta bancaria.</li>
+                        <li>CUIT del titular de la cuenta bancaria.</li>
+                        <li>Nombre del titular de la cuenta a debitar.</li>
+                    </ul>
+                    </p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>¿Qué pasa si supero la cantidad de envíos de mi plan contratado?</h5>
+                <div class="faqContent">
+                    <p> Como sabemos que hay algunos meses que son más activos que otros, es posible exceder el límite
+                        de envíos sin
+                        necesidad de realizar ninguna acción especial y <strong>sin correr riesgos de upgrades
+                            automáticos</strong>. El
+                        costo de los envíos e impresiones extra se verá impactado de manera en la próxima factura. El
+                        costo por cada mil
+                        envíos excedentes <strong>(CPM)</strong> a través de email y push notifications es el que se
+                        informa en cada
+                        plan:
+                    <ul>
+                        <li><strong>Plan Free</strong> - USD 3,60.</li>
+                        <li><strong>Plan Standard</strong> - USD 3,60.</li>
+                        <li><strong>Plan Professional</strong> - USD 1,80.</li>
+                        <li><strong>Plan Enterprise</strong> - USD 0,72.</li>
+                    </ul>
+                    </p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>¿Cómo puedo hacer si necesito agregar impresiones adicionales (además de las 10.000 incluídas en
+                    cada plan) para
+                    mis Banners Pop Ups desde OnSite?</h5>
+                <div class="faqContent">
+                    <p>Es muy simple: las impresiones extra para tus Banners Pop Ups tienen un costo adicional de U$D
+                        0,3
+                        <strong>CPM</strong> (Costo por cada mil impresiones). Si superas las 10.000 impresiones
+                        incluídas en tu plan,
+                        el extra aparecerá reflejado directamente en tu próxima factura.
+                    </p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>¿Puedo sumar archivos adjuntos dinámicos a mis correos?</h5>
+                <div class="faqContent">
+                    <p>Sí, es posible <strong>en el plan Enterprise</strong> y tiene un costo adicional de <strong>U$D 5
+                            (CPM)</strong>
+                        que se reflejará automáticamente en la próxima factura.</p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>Quiero pasarme del plan Free a un plan pago, ¿cómo puedo hacerlo?</h5>
+                <div class="faqContent">
+                    <p>Es súper simple: sólo debes ponerte en <a
+                            href="https://www.embluemail.com/landing/customer-success/" target="_blank">contacto con
+                            nuestro equipo de Customer Success.</a> No sólo harán la gestión de la forma
+                        más rápida para ti, sino que también te ayudarán luego a configurar mejor tu cuenta para sacarle
+                        el máximo
+                        provecho.</p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>Tengo un plan pago y quiero pasar al siguiente, ¿qué debo hacer?</h5>
+                <div class="faqContent">
+                    <p>Lo único que debes hacer es hablar con el equipo de Customer Success (si tienes un plan Standard)
+                        o con tu
+                        ejecutivo de cuentas (si tienes un Plan Pro). Te ayudará a encontrar tu plan ideal y te
+                        asesorará para que le
+                        saques todo el provecho. <a
+                            href="https://www.embluemail.com/solicitar-demo-email-marketing.html" target="_blank">Puedes
+                            ver el listado de contactos por país aquí.</a></p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>Cuando active mi plan, ¿alguien va a estar disponible para ayudarme día a día con mi estrategia?
+                </h5>
+                <div class="faqContent">
+                    <p>Eso es exactamente lo que hará tu <strong>ejecutivo de cuentas </strong>en los planes <strong>Pro
+                            y
+                            Enterprise</strong>. Su objetivo es acompañarte en todo lo que necesites en cuanto al uso de
+                        la plataforma,
+                        asesorarte en la definición de objetivos y proponerte innovaciones para que tu
+                        <strong>estrategia
+                            omnicanal</strong> esté siempre a la vanguardia.</p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>¿En qué consisten las distintas capacitaciones y cómo cambian dependiendo de cada plan?</h5>
+                <div class="faqContent">
+                    <p>
+                    <ul>
+                        <li>El <strong>Plan Free</strong> incluye <strong>capacitaciones grupales </strong>todas las
+                            semanas,
+                            <strong>abiertas a todo tu equipo.</strong> Éstas abarcan inducción y orientación general
+                            sobre el uso de la
+                            plataforma y son ideales para saber <strong>cómo autogestionar tus envíos.</strong>
+                        </li>
+                        <li>En el caso del <strong>Plan Standard</strong>, además cuentas con un equipo de
+                            <strong>Customer
+                                Success</strong> para acompañarte paso a paso en el onboarding y ayudarte a configurar
+                            toda la
+                            plataforma a medida de lo que necesitas.</li>
+                        <li>El <strong>plan Pro</strong> cuentas también con un <strong>Training y onboarding</strong>
+                            específicos para
+                            que puedas lograr la máxima aceleración en tu estrategia digital. Además, tu
+                            <strong>ejecutivo de cuentas
+                                asignado</strong> te ayudará cada vez que lo necesites y te propondrá estrategias e
+                            innovaciones para
+                            acercarte día a día a tus objetivos.</li>
+                        <li>Con el <strong>plan Enterprise</strong> accederás a <strong>capacitaciones específicas
+                                In-Company</strong>
+                            (ajustado a la situación epidemiológica, serán presenciales o virtuales) para que todo tu
+                            equipo conozca
+                            cómo utilizar la plataforma y esté al día en cuanto al diseño e implementación de
+                            estrategias omnicanales.
+                        </li>
+                    </ul> Además, <strong>todos los meses </strong>y con <strong>cualquiera de los planes</strong>
+                    podrás acceder a
+                    <strong>los #emBlueWebinars</strong>, charlas online y 100% gratuitas sobre lanzamientos,
+                    herramientas y plataforma;
+                    y a los <strong>#emBlueTalks</strong>, un espacio en donde referentes de la industria nos invitan a
+                    pensar sobre
+                    temáticas relacionadas a liderazgo, manejo del tiempo, salud y trabajo, y mucho más.</p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>¿Cuándo y cómo puedo contactar al equipo de soporte si tengo algún inconveniente? ¿Puedo acceder
+                    desde
+                    cualquiera de los planes?</h5>
+                <div class="faqContent">
+                    <p> El equipo de soporte <strong>está disponible todos los días de la semana</strong> y para
+                        <strong>todos los
+                            planes</strong> para responderte en tu idioma y a través del canal que tú prefieras: email,
+                        teléfono o chat.
+                        Si tienes <strong>plan Pro o Enteprise</strong>, además tendrás prioridad en la atención.
+                        <strong>Estos son sus
+                            horarios (GTM - 3)</strong>
+                    <ul>
+                        <li>Lunes a viernes: <strong>8h a 21h.</strong></li>
+                        <li>Sábados, domingos: <strong>12h a 18h.</strong></li>
+                    </ul>
+                    </p>
+                    <p> Puedes escribir a <a href="mailto:soporte@embluemail.com"
+                            target="_blank">soporte@embluemail.com</a>, entrar al
+                        chat en <a href="http://www.embluemail.com" target="_blank">www.embluemail.com</a> o llamar al
+                        número que
+                        corresponda a tu país:
+                    <ul>
+                        <li><em>Buenos Aires, Argentina </em>- 011 - 4136 - 3500 -</li>
+                        <li><em>Córdoba, Argentina </em>- 0351 - 570 - 4492</li>
+                        <li><em>Sao Paulo, Brasil </em>- 11 - 3195 - 7764</li>
+                        <li><em>Santiago de Chile, Chile </em>- 229 - 402 - 128</li>
+                        <li><em>Bogotá, Colombia </em>- 15 - 800 - 568</li>
+                        <li><em>CDMX, México </em>- 554 - 1603 - 707</li>
+                        <li><em>Lima, Perú </em>- 170 - 979 - 02</li>
+                        <li><em>Guayaquil, Ecuador </em>- 34238 4946</li>
+                        <li><em>Asunción, Paraguay </em>- +595 981 858 100</li>
+                        <li><em>Miami </em>+1 786 4058086</li>
+                        <li><em>Denver </em>+303 292 2201</li>
+                    </ul>
+                    </p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>¿Hay un tiempo mínimo de contratación de los servicios?</h5>
+                <div class="faqContent">
+                    <p> En los <strong>planes Standard, Pro y Enterprise</strong>, aplica la permanencia mínima
+                        estipulada en las <a href="https://www.embluemail.com/condiciones-contratacion.html"
+                            target="_blank">condiciones de
+                            contratación.</a> Si elegiste un <strong>pago mensual</strong>, podrás dar de baja el plan
+                        cuando quieras
+                        siempre que tengas la cuenta al día; si elegiste un <strong>pago anual con descuento</strong>,
+                        podrás darlo de
+                        baja al cumplirse los 12 meses de contratación. En el <strong>Plan Free</strong>, no hay ningún
+                        compromiso y
+                        puedes cancelarlo cuando quieras, a excepción de que debas el pago de eventuales envíos
+                        adicionales.</p>
+                </div>
+            </li>
+            <li class="faqItem">
+                <h5>Necesito el acompañamiento personalizado de un Plan pero no me alcanzan los envíos que incluye,
+                    ¿puedo acceder a
+                    un plan específico para mí?</h5>
+                <div class="faqContent">
+                    <p> Con <strong>cualquiera de los planes pagos</strong> puedes sumar todas las conversaciones extra
+                        que necesites a
+                        través de todos los canales. De todos modos, <strong>si superas la cantidad de envíos
+                            incluídos</strong> en un
+                        plan, es muy probable que necesites <strong>otro nivel de acompañamiento personalizado.</strong>
+                        Si eso sucede,
+                        te aconsejamos que te pongas en contacto con el equipo de <strong>Customer Success</strong>
+                        (plan Standard) o
+                        con tu <strong>ejecutivo de cuentas</strong> (plan Pro), que te ayudará a definir tu plan ideal.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <div class="footer dark mt-0 fwidth">
+        <div id="prefooterSeo">
+            <button id="prefooterBttn">
+                + Info de nuestras herramientas
+            </button>
+            <div id="postWrapper" style="height: 0;overflow: hidden;">
+                <ul>
+                    <li><a target="_blank" href="https://blog.embluemail.com/8-metricas-clave-para-tu-negocio/">
+                            Métricas clave para tu negocio
+                        </a></li>
+                    <li><a target="_blank" href="https://blog.embluemail.com/como-funciona-push-notifications/">
+                            Push Notification ¿Qué es y cómo funciona?
+                        </a></li>
+                    <li><a target="_blank" href="https://blog.embluemail.com/que-es-email-marketing-y-como-aplicarlo/">
+                            ¿Qué es email marketing y cómo aplicarlo?
+                        </a></li>
+                    <li><a target="_blank"
+                            href="https://blog.embluemail.com/proximo-webinar-configuracion-de-los-registros-spf-y-dkim/">
+                            ¿Qué es SPF, DKIM y DMARC, y cómo se configuran?
+                        </a></li>
+                    <li><a target="_blank" href="https://blog.embluemail.com/segmentacion-en-3-pasos-basicos/">
+                            Segmentación de clientes en 6 pasos básicos
+                        </a></li>
+                    <li><a target="_blank"
+                            href="https://blog.embluemail.com/como-logramos-que-nuestros-mails-lleguen-a-bandeja-de-entrada/">
+                            ¿Cómo hacer para que un correo no se vaya a spam?
+                        </a></li>
+                    <li><a target="_blank" href="https://blog.embluemail.com/como-alcanzar-la-omnicanalidad/">
+                            ¿Cómo alcanzar la omnicanalidad?
+                        </a></li>
+                    <li><a target="_blank" href="https://blog.embluemail.com/como-funciona-smtp-pop3-e-imap/">
+                            ¿Qué es SMTP y cómo funciona?
+                        </a></li>
+                    <li><a target="_blank"
+                            href="https://blog.embluemail.com/los-6-mejores-podcast-de-marketing-digital/">
+                            Los 6 mejores podcasts de marketing digital
+                        </a>
+                    </li>
+                    <li><a href="https://blog.embluemail.com/que-es-el-sms-marketing/">
+                            ¿Qué es el SMS marketing?
+                        </a></li>
+                    <li><a
+                            href="https://blog.embluemail.com/net-promoter-score-que-es-el-nps-para-que-sirve-como-se-calcula/">
+                            Net Promoter Score: qué es el NPS, para qué sirve y cómo se calcula
+                        </a></li>
+                    <li><a href="https://blog.embluemail.com/omnicanalidad-como-usarla-en-onboarding-clientes/">
+                            Omnicanalidad: cómo usarla en el proceso de onboarding de clientes
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <img alt="emblue-logo" class="img-fluid"
+                            src="https://www.embluemail.com/images/emblue-logo.svg" />
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-light">
+                    <p>
+                        <a href="https://blog.embluemail.com/por-que-2019-implementar-la-omnicanalidad/"
+                            title="&iquest;Qu&eacute; es Omnicanalidad?" target="_blank"><strong>&iquest;Qu&eacute; es
+                                Omnicanalidad?</strong></a><br /><br />
+                    </p>
+                    <div class="mb-3">
+                        <a class="work-with-us animated fadeInUp delay-1s"
+                            href="https://embluemarketingcloud.hiringroom.com/jobs" target="_blank"
+                            title="Trabaja con nosotros"><span>Trabaja con nosotros</span></a>
+                    </div>
+                    <p>
+                        <a href="https://www.embluemail.com/eventos.html" target="_blank">Eventos</a><br />
+                        <a href="https://www.embluemail.com/terminos-y-condiciones.html" target="_blank">Términos y
+                            condiciones</a><br>
+                        <a href="https://www.embluemail.com/terminos-y-condiciones-sms.html" target="_blank">Uso de
+                            SMS</a><br>
+                        <a href="https://www.embluemail.com/condiciones-contratacion.html" target="_blank">
+                            Condiciones de contratación</a><br />
+                        <a href="https://www.embluemail.com/denuncias-abusos.html" target="_blank">Denuncias de
+                            abuso</a><br />
+                        <a href="https://blog.embluemail.com/" target="_blank">Blog</a><br /><a
+                            href="https://help.embluemail.com/" target="_blank">Help</a><br />
+                        <a href="https://developer.embluemail.com/" target="_blank">Developer Center</a> <br>
+                        <a href="http://embluemail.com/glosario/" target="_blank">Glosario</a>
+                    </p>
+                </div>
+                <div class="col-lg-3">
+                    <p class="no-m-b-sm">
+                        <strong>Nuestra plataforma</strong><br /><br />
+                        <a href="https://www.embluemail.com/email-marketing-and-web-connect.html" target="_blank">Email
+                            marketing y web connect</a><br />
+                        <a href="https://www.embluemail.com/integrations.html" target="_blank">Integraci&oacute;n con
+                            plataformas</a><br />
+                        <a href="https://www.embluemail.com/sms-masivo.html" target="_blank">Sms</a><br />
+                        <a href="https://www.embluemail.com/push-notifications.html" target="_blank">Push
+                            notifications</a><br />
+                        <a href="https://www.embluemail.com/automation.html"
+                            target="_blank">Automatizaci&oacute;n</a><br />
+                        <a href="https://www.embluemail.com/remarketing.html" target="_blank">Remarketing</a><br />
+                        <a href="https://www.embluemail.com/drag-and-drop.html" target="_blank">Drag and drop</a><br />
+                        <a href="https://www.embluemail.com/onsite.html" target="_blank">OnSite</a><br />
+                        <a href="https://www.embluemail.com/whatsapp-marketing.html" target="_blank">Whatsapp</a><br />
+                        <a href="https://www.embluemail.com/contact-frequency-scoring.html" target="_blank">Contact
+                            Frequency Scoring</a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3">
+                    <p class="l-h">
+                        <strong>Headquarters (Argentina)</strong><br />Olazabal 1515,
+                        CABA.<br />+54 11 4136 3500<br /><br />
+                        <strong><i>Centroam&eacute;rica</i></strong>
+                        +506-4031-0300<br />
+                        <strong><i>Asunci&oacute;n</i></strong> +595 981 858 100<br />
+                        <strong><i>Bogot&aacute;</i></strong> +57 1 3906414<br />
+                        <strong><i>S&atilde;o Paulo</i></strong> +55 11 3195 7764<br />
+                        <strong><i>Guayaquil</i></strong> +59 3 4238 4946<br />
+                        <strong><i>Lima</i></strong> +51 992 749 788<br />
+                        <strong><i>M&eacute;xico</i></strong> +52 55 1490 2275<br />
+                        <strong><i>Santiago</i></strong> +56 2 2887 3790<br />
+                        <strong><i>USA</i></strong> + 1 786 4058086
+                    </p>
+                </div>
+            </div>
+
+            <div class="social">
+                <a href="https://www.facebook.com/embluelatam" target="_blank"><i
+                        class="fab fa-facebook-f fa-2x"></i></a>
+                <a href="https://www.twitter.com/emBlueLatam" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                <a href="https://www.linkedin.com/company/embluelatam/" target="_blank"><i
+                        class="fab fa-linkedin-in fa-2x"></i></a>
+                <a href="https://www.youtube.com/user/embluemail" target="_blank"><i
+                        class="fab fa-youtube fa-2x"></i></a>
+                <a href="https://www.instagram.com/embluemail/" target="_blank"><i
+                        class="fab fa-instagram fa-2x"></i></a>
+            </div>
+
+            <div class="tagline-footer">
+                <p>
+                    Hacemos que la
+                    <a href="https://www.embluemail.com/" title="Omnicanalidad">omnicanalidad</a>
+                    sea simple.
+                </p>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
+    <script src="faqs.js"></script>
+    <script src="cookiehandler.js"></script>
 </body>
 
 </html>

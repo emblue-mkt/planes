@@ -225,3 +225,22 @@ function getCpm(country) {
 function handleSMSChange() {
   smsValue.innerHTML = `USD ${getCpm(smsCountry.value) * smsQuantity.value}`;
 }
+const toggleElement = (el) => {
+  if(!el.style.height || el.style.height === "0px") {
+    el.style.height = el.scrollHeight + "px"
+  }else{
+    el.style.height = '0px'
+  }
+}
+
+
+var prefooterBttn = document.getElementById("prefooterBttn");
+var postWrapper = document.getElementById("postWrapper");
+console.log(postWrapper.style.height)
+prefooterBttn.onclick = () => {
+    if (postWrapper.style.height === "0px") {
+        postWrapper.style.height = "145px";
+    } else {
+        postWrapper.style.height = "0px";
+    }
+}
