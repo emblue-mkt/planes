@@ -406,13 +406,11 @@ span.asterisk {
   ul#payment {
     flex-wrap: wrap;
     column-gap: 0;
-    max-width: 56vw;
+    max-width: 65vw;
   }
-  ul#payment li {
-    flex-grow: 1;
-  }
+
   ul#payment li:first-child{
-    margin-right: 3em;
+    width: 54%;
   }
 
   ul#payment li:nth-child(3),
@@ -586,6 +584,9 @@ span.asterisk {
     text-decoration: none;
     font-weight: 500;
   }
+  #sidebarMenu{
+    display: none;
+  }
 }
 .contactBttn{
   text-decoration: none;
@@ -598,4 +599,64 @@ span.asterisk {
   nav, div.footer {
       zoom: .85
   }
+}
+
+/* Menu */
+@media (min-width: 700px) {
+  #sidebarMenu{
+    display: none;
+  }
+}
+#sidebarMenu *{
+  text-decoration: none;
+}
+#sidebarMenu {
+  height: 100vh;
+  position: fixed;
+  background-color: #fff;
+  width: 70vw;
+  padding: 2em 0;
+  top: 0;
+  z-index: 9999;
+  left: -75vw;
+  transition: left .5s;
+}
+#sidebarMenu.active {
+  left: 0;
+}
+#sidebarMenu img{
+  width: 40vw;
+  padding: 0 1em 2em;
+}
+.sidebar-items-container{
+  display: grid;
+}
+.sidebar-items-container > div, .sidebar-items-container > a{
+  padding: 3vw 5vw;
+  border-bottom: solid 1px #f1f1f1;
+  color: #00568f;
+}
+.sidebar-items-container summary{
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+}
+.sidebar-items-container summary::marker, summary::-webkit-details-marker  {
+  display: none!important;
+  content: ''!important;
+}
+.sidebar-items-container details p{
+  display: grid;
+  padding: 0.5em 1em;
+}
+.sidebar-items-container details p a{
+  color: #00568f;
+}
+a.work-with-us{
+  display: inline-block;
+  margin:5vw 2vw!important;
+}
+svg.control-icon{
+  fill: #00568f;
+  vertical-align: bottom;
 }

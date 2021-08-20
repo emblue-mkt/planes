@@ -57,13 +57,13 @@ const planData = {
   standard: {
     title: "Standard",
     default: 0,
-    step: 50000,
-    max: 450000,
-    min: 0,
+    step: 20000,
+    max: 250000,
+    min: 30000,
     basePrice: 180,
     extraCpm: 3.6,
     included: 50000,
-    recNextPlanAt: 250000,
+    recNextPlanAt: 210000,
     recNextPlan: `<strong>WoW:</strong> esa cantidad de envíos extra significa que necesitas nuestro <strong style="color: #FD5739">Plan Pro</strong>. Tu marca está lista para una verdadera aceleración omnicanal`,
     marks: [
       {
@@ -75,36 +75,44 @@ const planData = {
         label: "50k",
       },
       {
-        value: 100000,
-        label: "100k",
+        value: 70000,
+        label: "70k",
+      },
+      {
+        value: 90000,
+        label: "90k",
+      },
+      {
+        value: 110000,
+        label: "110k",
+      },
+      {
+        value: 130000,
+        label: "130k",
       },
       {
         value: 150000,
         label: "150k",
       },
       {
-        value: 200000,
-        label: "200k",
+        value: 170000,
+        label: "170k",
+      },
+      {
+        value: 190000,
+        label: "190k",
+      },
+      {
+        value: 210000,
+        label: "210k",
+      },
+      {
+        value: 230000,
+        label: "230k",
       },
       {
         value: 250000,
         label: "250k",
-      },
-      {
-        value: 300000,
-        label: "300k",
-      },
-      {
-        value: 350000,
-        label: "350k",
-      },
-      {
-        value: 400000,
-        label: "400k",
-      },
-      {
-        value: 450000,
-        label: "450k",
       },
     ],
     contactLink: "https://buy.embluemail.com/form-ec/login-ecommerce.php?plan=standard"
